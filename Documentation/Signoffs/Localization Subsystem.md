@@ -14,6 +14,7 @@ The localization subsystem (Fig. 1) will be tasked with gathering and processing
 
 ## Buildable Schematic
 ![Alt text](https://cdn.discordapp.com/attachments/385728957950984195/1042642640933503026/localization_v1.png)
+
 The values for required voltage and resistive load used in Fig. 2. were derived from the specification documents for the individual components.
 
 ## Analysis
