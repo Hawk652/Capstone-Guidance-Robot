@@ -1,5 +1,5 @@
 # Localization Subsystem
-![alt text]([http://url](https://cdn.discordapp.com/attachments/385728957950984195/1042640894735695952/unnamed_1.png)
+![alt text](http://cdn.discordapp.com/attachments/385728957950984195/1042640894735695952/unnamed_1.png/to/img.png)
 ## Function of the Subsystem
 The localization subsystem (Fig. 1) will be tasked with gathering and processing positional data points from sensors. The sensors shall all be mounted onboard the Turtlebot 3. The sensors that will gather data for this subsystem will be the LiDar and the ESP32UWB DW3000. The LiDar will gather data points from all reflective surfaces around it for the SLAM algorithm to determine the AuR's current location. The UWB (Ultra Wideband) module will determine the distance between itself and 2 other UWB modules using triangulation. The other 2 UWB modules will serve as a destination marker. Using all the prior mentioned data, the AuR will be able to determine its current location. The AuR will use the updated current position data along with the route data generated from the navigation subsystem to determine the deviation of the route. 
 
