@@ -21,6 +21,7 @@ The values for required voltage and resistive load used in Fig. 2. were derived 
 
 ### UWB  Beacons:
 ![Alt text](https://cdn.discordapp.com/attachments/385728957950984195/1042643351914164255/Trilateration.png)
+
 A UWB beacon-based solution was chosen for higher resolution localization since it is accurate to within 15 cm which aids the constraints of being within 15 cm of its path and within 1 m of its destination [1]. The UWB beacons will be ESP32 UWB DW3000 modules.
 
 Trilateration can be used to find the coordinates of an object based on its distance relative to three beacons [2]:
