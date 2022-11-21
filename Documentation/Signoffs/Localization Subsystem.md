@@ -60,8 +60,8 @@ The figure above shows the current draw for each component of the localization s
 | OpenCR1.0 | 1 | $215.00 | Already Purchased | 
 | Raspberry Pi3 B+ | 1 | $35.00 | Already Purchased |
 | LDS-01 | 1 | $200.00 | Already Purchased |
-| ESP32UWB DW3000 | 5 | $40.00 | $200 | 
-| | | Total Subsystem Cost: | $200|
+| ESP32UWB DW3000 | 5 | $40.00 | $200.00 | 
+| | | Total Subsystem Cost: | $200.00|
 
 ## References
 [1] Y.  Name,  “ROBOTIS  e-Manual,”  ROBOTIS  e-Manual.  https://emanual.robotis.com/docs/en/platform/turtlebot3/slam/  (accessed  Nov. 09, 2022).  
