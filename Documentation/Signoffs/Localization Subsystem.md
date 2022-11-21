@@ -56,7 +56,9 @@ The analysis of the power for the localization subsystem resulted in failure. Th
 ## BOM
 | Item | Quantity | Price Per Item | Total Price | 
 |-|-|-|-| 
-| Turtlebot 3 Waffle Pi | 1 | $1.647.00 | Already Purchased | 
+| OpenCR1.0 | 1 | $215.00 | Already Purchased | 
+| Raspberry Pi3 B+ | 1 | $35.00 | Already Purchased |
+| LDS-01 | 1 | $200.00 | Already Purchased |
 | ESP32UWB DW3000 | 5 | $40.00 | $200 | 
 | | | Total Subsystem Cost: | $200|
 
