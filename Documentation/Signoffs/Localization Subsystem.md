@@ -36,12 +36,12 @@ In order to find the distance from the device to a given beacon this Two Way Ran
 
 $ToF=\frac{(RR-SP)-(SR-RP) +(RF-SR)-(SF-RR)}{4}$
 
-These equations work by calculating the time between messages and using the speed of light to determine the distance between beacons.
+These equations work by calculating the time between messages and using the speed of light to determine the distance between beacons. The coordinates are calculated by the ESP32 and sent from the ESP32 to the Raspberry PI via a wired connection using I2C protocol.
 
 ### Turtlebot:
 
 #### LIDAR:
-LiDar sensors collect depth information about the environment using a laser. A laser is pulsed from the sensor and photons are reflected back to the sensor [4]. This allows the sensor to know the distance between itself and the surface from which the photons were reflected. The sensor spins and collects many points in order to gather depth information surrounding the sensor.
+LiDar sensors collect depth information about the environment using a laser. A laser is pulsed from the sensor and photons are reflected back to the sensor [4]. This allows the sensor to know the distance between itself and the surface from which the photons were reflected. The sensor spins and collects many points in order to gather depth information surrounding the sensor. The depth data gathered by the LiDar sensor is sent to the OpenCR 1.0 via a wired connection using UART protocol. The OpenCR 1.0 will then take the depth data and send it to the Raspberry PI via a wired connection using UART protocol when prompted for the data by the Raspberry PI.
 
 #### SLAM and ROS:
 As the AuR moves, data points are collected by the LiDar sensor and processed by a SLAM algorithm built into the ROS2, which is on board the TurtleBot3 [1]. The SLAM algorithm takes data points from the LiDar and creates a model of the environment [5]. The SLAM algorithm uses incoming points to estimate the location of the TurtleBot3 by comparing the value of the points to their expected values and making corrections as needed. This process is described by the probability:
@@ -56,9 +56,7 @@ The analysis of the power for the localization subsystem resulted in failure. Th
 ## BOM
 | Item | Quantity | Price Per Item | Total Price | 
 |-|-|-|-| 
-| OpenCR1.0 | 1 | $215.00 | Already Purchased | 
-| Raspberry Pi3 B+ | 1 | $35.00 | Already Purchased |
-| LDS-01 | 1 | $200.00 | Already Purchased |
+| Turtlebot 3 Waffle Pi | 1 | $1.647.00 | Already Purchased | 
 | ESP32UWB DW3000 | 5 | $40.00 | $200 | 
 | | | Total Subsystem Cost: | $200|
 
