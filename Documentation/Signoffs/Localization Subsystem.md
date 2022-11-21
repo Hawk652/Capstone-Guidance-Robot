@@ -51,7 +51,8 @@ $P(x_k, m|z0_k, u0_k, x_0)$
 Accuracy of SLAM is dependant on the quality of the LiDar sensor but can have error as low as "5 cm given that LiDar sensor depth accuracy already has 2-3 cm error" [6]. The type of SLAM algorithm used will also impact the accuracy of the model. This information means the constraints of being within 15 cm of the path and 1m of the destination, when used in conjunction with the UWB, can be fulfilled.
 
 ### Power:
-The analysis of the power for the localization subsystem resulted in failure. The failure was caused by the team's lack of knowledge of including several of the turtlebot's components in a circuit simulation. The team will need further advisement on the circuit simulation for the localization subsystem.
+![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/localization%20current%20graph.png)
+The figure above shows the current draw for each component of the localization subsystem.
 
 ## BOM
 | Item | Quantity | Price Per Item | Total Price | 
