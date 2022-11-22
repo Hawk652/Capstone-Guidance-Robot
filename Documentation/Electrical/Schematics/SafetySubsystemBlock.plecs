@@ -1,0 +1,527 @@
+Plecs {
+  Name          "SafetySubsystemBlock"
+  Version       "4.6"
+  CircuitModel  "ContStateSpace"
+  StartTime     "0.0"
+  TimeSpan      "1.0"
+  Timeout       ""
+  Solver        "auto"
+  MaxStep       "1e-3"
+  InitStep      "-1"
+  FixedStep     "1e-3"
+  Refine        "1"
+  ZCStepSize    "1e-9"
+  RelTol        "1e-3"
+  AbsTol        "-1"
+  TurnOnThreshold "0"
+  SyncFixedStepTasks "2"
+  UseSingleCommonBaseRate "2"
+  LossVariableLimitExceededMsg "3"
+  NegativeSwitchLossMsg "3"
+  DivisionByZeroMsg "3"
+  StiffnessDetectionMsg "2"
+  MaxConsecutiveZCs "1000"
+  AlgebraicLoopWithStateMachineMsg "3"
+  AssertionAction "1"
+  InitializationCommands ""
+  InitialState  "1"
+  SystemState   ""
+  TaskingMode   "1"
+  TaskConfigurations ""
+  CodeGenParameterInlining "2"
+  CodeGenFloatingPointFormat "2"
+  CodeGenAbsTimeUsageMsg "3"
+  CodeGenBaseName ""
+  CodeGenOutputDir ""
+  CodeGenExtraOpts ""
+  CodeGenTarget "Generic"
+  CodeGenTargetSettings ""
+  ExtendedMatrixPrecision "1"
+  MatrixSignificanceCheck "2"
+  EnableStateSpaceSplitting "2"
+  DisplayStateSpaceSplitting "1"
+  DiscretizationMethod "2"
+  ExternalModeSettings ""
+  AlgebraicLoopMethod "1"
+  AlgebraicLoopTolerance "1e-6"
+  ScriptsDialogGeometry ""
+  ScriptsDialogSplitterPos "0"
+  Schematic {
+    Location      [0, 23; 1368, 828]
+    ZoomFactor    1
+    SliderPosition [0, 0]
+    ShowBrowser   off
+    BrowserWidth  100
+    Component {
+      Type          DCVoltageSource
+      Name          "V_dc"
+      Show          on
+      Position      [205, 365]
+      Direction     down
+      Flipped       on
+      Parameter {
+        Variable      "V"
+        Value         "12"
+        Show          on
+      }
+    }
+    Component {
+      Type          Switch
+      Name          "Main Switch"
+      Show          on
+      Position      [335, 305]
+      Direction     left
+      Flipped       off
+      Parameter {
+        Variable      "s_init"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Resistor
+      Name          "DDS Chip"
+      Show          on
+      Position      [400, 365]
+      Direction     up
+      Flipped       off
+      Parameter {
+        Variable      "R"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          Resistor
+      Name          "LIDAR"
+      Show          on
+      Position      [795, 350]
+      Direction     up
+      Flipped       off
+      Parameter {
+        Variable      "R"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          Subsystem
+      Name          "Raspberry Pi"
+      Show          on
+      Position      [1175, 360]
+      Direction     left
+      Flipped       off
+      Frame         [-15, -25; 15, 25]
+      LabelPosition [18, 0]
+      LabelAlign    left
+      SampleTime    "-1"
+      CodeGenDiscretizationMethod "2"
+      CodeGenTarget "Generic"
+      MaskDisplayLang "2"
+      MaskIconFrame on
+      MaskIconOpaque off
+      MaskIconRotates on
+      Terminal {
+        Type          Port
+        Position      [-15, -20]
+        Direction     up
+      }
+      Terminal {
+        Type          Port
+        Position      [-15, 20]
+        Direction     down
+      }
+      Schematic {
+        Location      [415, 55; 884, 238]
+        ZoomFactor    1
+        SliderPosition [0, 0]
+        ShowBrowser   off
+        BrowserWidth  100
+        Component {
+          Type          Port
+          Name          "+"
+          Show          on
+          Position      [135, 95]
+          Direction     right
+          Flipped       off
+          Parameter {
+            Variable      "Index"
+            Value         "1"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Port
+          Name          "-"
+          Show          on
+          Position      [320, 90]
+          Direction     left
+          Flipped       off
+          Parameter {
+            Variable      "Index"
+            Value         "2"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+      }
+    }
+    Component {
+      Type          Subsystem
+      Name          "Proximity     Sensor"
+      Show          on
+      Position      [1035, 355]
+      Direction     down
+      Flipped       off
+      Frame         [-50, -50; 50, 50]
+      LabelPosition [0, -53]
+      LabelAlign    down
+      SampleTime    "-1"
+      CodeGenDiscretizationMethod "2"
+      CodeGenTarget "Generic"
+      MaskDisplayLang "2"
+      MaskIconFrame on
+      MaskIconOpaque off
+      MaskIconRotates on
+      Terminal {
+        Type          Port
+        Position      [-10, 55]
+        Direction     down
+      }
+      Terminal {
+        Type          Port
+        Position      [0, -55]
+        Direction     up
+      }
+      Schematic {
+        Location      [415, 55; 884, 238]
+        ZoomFactor    1
+        SliderPosition [0, 0]
+        ShowBrowser   off
+        BrowserWidth  100
+        Component {
+          Type          Port
+          Name          "+"
+          Show          on
+          Position      [50, 80]
+          Direction     right
+          Flipped       off
+          Parameter {
+            Variable      "Index"
+            Value         "1"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Port
+          Name          "-"
+          Show          on
+          Position      [255, 80]
+          Direction     left
+          Flipped       off
+          Parameter {
+            Variable      "Index"
+            Value         "2"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+      }
+    }
+    Component {
+      Type          Subsystem
+      Name          "Full System"
+      Show          on
+      Position      [555, 350]
+      Direction     left
+      Flipped       off
+      Frame         [-40, -65; 40, 65]
+      LabelPosition [43, 0]
+      LabelAlign    left
+      SampleTime    "-1"
+      CodeGenDiscretizationMethod "2"
+      CodeGenTarget "Generic"
+      MaskDisplayLang "2"
+      MaskIconFrame on
+      MaskIconOpaque off
+      MaskIconRotates on
+      Terminal {
+        Type          Port
+        Position      [-55, -45]
+        Direction     up
+      }
+      Terminal {
+        Type          Port
+        Position      [-55, 45]
+        Direction     down
+      }
+      Terminal {
+        Type          Port
+        Position      [-45, -45]
+        Direction     up
+      }
+      Terminal {
+        Type          Port
+        Position      [-45, 45]
+        Direction     down
+      }
+      Schematic {
+        Location      [415, 55; 884, 238]
+        ZoomFactor    1
+        SliderPosition [0, 0]
+        ShowBrowser   off
+        BrowserWidth  100
+        Component {
+          Type          Port
+          Name          "-"
+          Show          on
+          Position      [90, 140]
+          Direction     right
+          Flipped       off
+          Parameter {
+            Variable      "Index"
+            Value         "1"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Port
+          Name          "--"
+          Show          on
+          Position      [370, 140]
+          Direction     left
+          Flipped       off
+          Parameter {
+            Variable      "Index"
+            Value         "2"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Port
+          Name          "12V"
+          Show          on
+          Position      [185, 55]
+          Direction     down
+          Flipped       off
+          Parameter {
+            Variable      "Index"
+            Value         "3"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Port
+          Name          "5V"
+          Show          on
+          Position      [255, 50]
+          Direction     down
+          Flipped       off
+          Parameter {
+            Variable      "Index"
+            Value         "4"
+            Show          on
+          }
+          Parameter {
+            Variable      "Width"
+            Value         "-1"
+            Show          off
+          }
+        }
+        Component {
+          Type          Ground
+          Name          "Ground"
+          Show          off
+          Position      [190, 170]
+          Direction     up
+          Flipped       off
+        }
+        Connection {
+          Type          Wire
+          SrcComponent  "--"
+          SrcTerminal   1
+          Points        [190, 140]
+          Branch {
+            DstComponent  "-"
+            DstTerminal   1
+          }
+          Branch {
+            DstComponent  "Ground"
+            DstTerminal   1
+          }
+        }
+      }
+    }
+    Component {
+      Type          Ground
+      Name          "Ground"
+      Show          off
+      Position      [300, 475]
+      Direction     up
+      Flipped       off
+    }
+    Component {
+      Type          Resistor
+      Name          "HC-SR04 \nUltasonic \nSensor"
+      Show          on
+      Position      [895, 350]
+      Direction     up
+      Flipped       off
+      Parameter {
+        Variable      "R"
+        Value         "1"
+        Show          off
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "V_dc"
+      SrcTerminal   1
+      Points        [205, 305]
+      DstComponent  "Main Switch"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "DDS Chip"
+      SrcTerminal   1
+      Points        [400, 305]
+      Branch {
+        DstComponent  "Main Switch"
+        DstTerminal   2
+      }
+      Branch {
+        Points        [485, 305; 485, 395]
+        DstComponent  "Full System"
+        DstTerminal   3
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "V_dc"
+      SrcTerminal   2
+      Points        [205, 425; 300, 425]
+      Branch {
+        Points        [400, 425]
+        DstComponent  "DDS Chip"
+        DstTerminal   2
+      }
+      Branch {
+        Points        [300, 445]
+        Branch {
+          DstComponent  "Ground"
+          DstTerminal   1
+        }
+        Branch {
+          Points        [495, 445]
+          Branch {
+            Points        [600, 445]
+            Branch {
+              DstComponent  "Full System"
+              DstTerminal   2
+            }
+            Branch {
+              Points        [795, 445]
+              Branch {
+                Points        [895, 445]
+                Branch {
+                  Points        [1035, 445]
+                  Branch {
+                    DstComponent  "Proximity     Sensor"
+                    DstTerminal   2
+                  }
+                  Branch {
+                    Points        [1195, 445]
+                    DstComponent  "Raspberry Pi"
+                    DstTerminal   2
+                  }
+                }
+                Branch {
+                  DstComponent  "HC-SR04 \nUltasonic \nSensor"
+                  DstTerminal   2
+                }
+              }
+              Branch {
+                DstComponent  "LIDAR"
+                DstTerminal   2
+              }
+            }
+          }
+          Branch {
+            Points        [495, 405]
+            DstComponent  "Full System"
+            DstTerminal   1
+          }
+        }
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "LIDAR"
+      SrcTerminal   1
+      Points        [795, 250]
+      Branch {
+        Points        [670, 250; 670, 395]
+        DstComponent  "Full System"
+        DstTerminal   4
+      }
+      Branch {
+        Points        [895, 250]
+        Branch {
+          Points        [1045, 250]
+          Branch {
+            DstComponent  "Proximity     Sensor"
+            DstTerminal   1
+          }
+          Branch {
+            Points        [1155, 250]
+            DstComponent  "Raspberry Pi"
+            DstTerminal   1
+          }
+        }
+        Branch {
+          DstComponent  "HC-SR04 \nUltasonic \nSensor"
+          DstTerminal   1
+        }
+      }
+    }
+    Annotation {
+      Name          "<html><body>\n<p align=\"center\"><span style=\" font-siz"
+"e:19px; font-weight:600;\">SUBSYSTEM BLOCK DIAGRAM</span></p></body></html>"
+      Position      [670, 215]
+    } 
+  }
+}

@@ -1,0 +1,1510 @@
+Plecs {
+  Name          "ProximitySensor"
+  Version       "4.6"
+  CircuitModel  "ContStateSpace"
+  StartTime     "0.0"
+  TimeSpan      "1.0"
+  Timeout       ""
+  Solver        "auto"
+  MaxStep       "1e-3"
+  InitStep      "-1"
+  FixedStep     "1e-3"
+  Refine        "1"
+  ZCStepSize    "1e-9"
+  RelTol        "1e-3"
+  AbsTol        "-1"
+  TurnOnThreshold "0"
+  SyncFixedStepTasks "2"
+  UseSingleCommonBaseRate "2"
+  LossVariableLimitExceededMsg "3"
+  NegativeSwitchLossMsg "3"
+  DivisionByZeroMsg "3"
+  StiffnessDetectionMsg "2"
+  MaxConsecutiveZCs "1000"
+  AlgebraicLoopWithStateMachineMsg "3"
+  AssertionAction "1"
+  InitializationCommands ""
+  InitialState  "1"
+  SystemState   ""
+  TaskingMode   "1"
+  TaskConfigurations ""
+  CodeGenParameterInlining "2"
+  CodeGenFloatingPointFormat "2"
+  CodeGenAbsTimeUsageMsg "3"
+  CodeGenBaseName ""
+  CodeGenOutputDir ""
+  CodeGenExtraOpts ""
+  CodeGenTarget "Generic"
+  CodeGenTargetSettings ""
+  ExtendedMatrixPrecision "1"
+  MatrixSignificanceCheck "2"
+  EnableStateSpaceSplitting "2"
+  DisplayStateSpaceSplitting "1"
+  DiscretizationMethod "2"
+  ExternalModeSettings ""
+  AlgebraicLoopMethod "1"
+  AlgebraicLoopTolerance "1e-6"
+  ScriptsDialogGeometry ""
+  ScriptsDialogSplitterPos "0"
+  Schematic {
+    Location      [7, 30; 1361, 821]
+    ZoomFactor    1
+    SliderPosition [0, 74]
+    ShowBrowser   off
+    BrowserWidth  100
+    Component {
+      Type          DCVoltageSource
+      Name          "V_dc"
+      Show          on
+      Position      [200, 300]
+      Direction     down
+      Flipped       on
+      Parameter {
+        Variable      "V"
+        Value         "5"
+        Show          on
+      }
+    }
+    Component {
+      Type          DCVoltageSource
+      Name          "V_dc1"
+      Show          on
+      Position      [275, 500]
+      Direction     down
+      Flipped       on
+      Parameter {
+        Variable      "V"
+        Value         "5"
+        Show          on
+      }
+    }
+    Component {
+      Type          DCVoltageSource
+      Name          "V_dc2"
+      Show          on
+      Position      [330, 640]
+      Direction     down
+      Flipped       on
+      Parameter {
+        Variable      "V"
+        Value         "5"
+        Show          on
+      }
+    }
+    Component {
+      Type          Diode
+      Name          "D1"
+      Show          on
+      Position      [395, 240]
+      Direction     right
+      Flipped       on
+      Parameter {
+        Variable      "Vf"
+        Value         " 1N4001"
+        Show          off
+      }
+      Parameter {
+        Variable      "Ron"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "thermal"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "Rth"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "T_init"
+        Value         ""
+        Show          off
+      }
+    }
+    Component {
+      Type          Diode
+      Name          "D2"
+      Show          on
+      Position      [395, 305]
+      Direction     left
+      Flipped       on
+      Parameter {
+        Variable      "Vf"
+        Value         " 1N4001"
+        Show          off
+      }
+      Parameter {
+        Variable      "Ron"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "thermal"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "Rth"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "T_init"
+        Value         ""
+        Show          off
+      }
+    }
+    Component {
+      Type          Diode
+      Name          "D3"
+      Show          on
+      Position      [420, 370]
+      Direction     right
+      Flipped       on
+      Parameter {
+        Variable      "Vf"
+        Value         " 1N4001"
+        Show          off
+      }
+      Parameter {
+        Variable      "Ron"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "thermal"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "Rth"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "T_init"
+        Value         ""
+        Show          off
+      }
+    }
+    Component {
+      Type          Diode
+      Name          "D4"
+      Show          on
+      Position      [420, 435]
+      Direction     left
+      Flipped       on
+      Parameter {
+        Variable      "Vf"
+        Value         " 1N4001"
+        Show          off
+      }
+      Parameter {
+        Variable      "Ron"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "thermal"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "Rth"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "T_init"
+        Value         ""
+        Show          off
+      }
+    }
+    Component {
+      Type          Diode
+      Name          "D5"
+      Show          on
+      Position      [410, 540]
+      Direction     right
+      Flipped       on
+      Parameter {
+        Variable      "Vf"
+        Value         " 1N4001"
+        Show          off
+      }
+      Parameter {
+        Variable      "Ron"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "thermal"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "Rth"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "T_init"
+        Value         ""
+        Show          off
+      }
+    }
+    Component {
+      Type          Diode
+      Name          "D6"
+      Show          on
+      Position      [415, 605]
+      Direction     left
+      Flipped       on
+      Parameter {
+        Variable      "Vf"
+        Value         " 1N4001"
+        Show          off
+      }
+      Parameter {
+        Variable      "Ron"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "thermal"
+        Value         ""
+        Show          off
+      }
+      Parameter {
+        Variable      "Rth"
+        Value         "0"
+        Show          off
+      }
+      Parameter {
+        Variable      "T_init"
+        Value         ""
+        Show          off
+      }
+    }
+    Component {
+      Type          Ground
+      Name          "Ground"
+      Show          off
+      Position      [200, 765]
+      Direction     up
+      Flipped       off
+    }
+    Component {
+      Type          Capacitor
+      Name          "C1"
+      Show          on
+      Position      [460, 270]
+      Direction     down
+      Flipped       on
+      Parameter {
+        Variable      "C"
+        Value         " 0.0000047"
+        Show          off
+      }
+      Parameter {
+        Variable      "v_init"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Capacitor
+      Name          "C2"
+      Show          on
+      Position      [495, 410]
+      Direction     down
+      Flipped       on
+      Parameter {
+        Variable      "C"
+        Value         " 0.0000047"
+        Show          off
+      }
+      Parameter {
+        Variable      "v_init"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Capacitor
+      Name          "C3"
+      Show          on
+      Position      [485, 575]
+      Direction     down
+      Flipped       on
+      Parameter {
+        Variable      "C"
+        Value         " 0.0000047"
+        Show          off
+      }
+      Parameter {
+        Variable      "v_init"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Resistor
+      Name          "R1"
+      Show          on
+      Position      [520, 265]
+      Direction     up
+      Flipped       off
+      Parameter {
+        Variable      "R"
+        Value         "1000"
+        Show          off
+      }
+    }
+    Component {
+      Type          Resistor
+      Name          "R2"
+      Show          on
+      Position      [555, 395]
+      Direction     up
+      Flipped       off
+      Parameter {
+        Variable      "R"
+        Value         "1000"
+        Show          off
+      }
+    }
+    Component {
+      Type          Resistor
+      Name          "R3"
+      Show          on
+      Position      [545, 565]
+      Direction     up
+      Flipped       off
+      Parameter {
+        Variable      "R"
+        Value         "1000"
+        Show          off
+      }
+    }
+    Component {
+      Type          VarResistorConstInductor
+      Name          "Resonator1"
+      Show          on
+      Position      [790, 160]
+      Direction     down
+      Flipped       off
+      Parameter {
+        Variable      "L"
+        Value         ".003"
+        Show          off
+      }
+      Parameter {
+        Variable      "i_init"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Inductor
+      Name          "L1"
+      Show          on
+      Position      [785, 320]
+      Direction     left
+      Flipped       off
+      Parameter {
+        Variable      "L"
+        Value         ".003"
+        Show          off
+      }
+      Parameter {
+        Variable      "i_init"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Resistor
+      Name          "R4"
+      Show          on
+      Position      [855, 320]
+      Direction     right
+      Flipped       off
+      Parameter {
+        Variable      "R"
+        Value         "2000"
+        Show          off
+      }
+    }
+    Component {
+      Type          Reference
+      SrcComponent  "Components/Electrical/Electronics/Op-Amp"
+      Name          "Op-Amp"
+      Show          on
+      Position      [945, 330]
+      Direction     up
+      Flipped       on
+      Frame         [-20, -20; 20, 20]
+      LabelPosition [0, 23]
+      LabelAlign    up
+      Parameter {
+        Variable      "A"
+        Value         "1e6"
+        Show          off
+      }
+      Terminal {
+        Type          Port
+        Position      [-25, -10]
+        Direction     left
+      }
+      Terminal {
+        Type          Port
+        Position      [-25, 10]
+        Direction     left
+      }
+      Terminal {
+        Type          Port
+        Position      [25, 0]
+        Direction     right
+      }
+      Terminal {
+        Type          Port
+        Position      [0, 15]
+        Direction     down
+      }
+    }
+    Component {
+      Type          Resistor
+      Name          "FeedbackR10"
+      Show          on
+      Position      [940, 265]
+      Direction     right
+      Flipped       off
+      Parameter {
+        Variable      "R"
+        Value         "20000"
+        Show          off
+      }
+    }
+    Component {
+      Type          Inductor
+      Name          "L2"
+      Show          on
+      Position      [785, 370]
+      Direction     left
+      Flipped       off
+      Parameter {
+        Variable      "L"
+        Value         ".003"
+        Show          off
+      }
+      Parameter {
+        Variable      "i_init"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Resistor
+      Name          "R5"
+      Show          on
+      Position      [855, 370]
+      Direction     right
+      Flipped       off
+      Parameter {
+        Variable      "R"
+        Value         "2000"
+        Show          off
+      }
+    }
+    Component {
+      Type          Inductor
+      Name          "L3"
+      Show          on
+      Position      [855, 540]
+      Direction     left
+      Flipped       off
+      Parameter {
+        Variable      "L"
+        Value         ".003"
+        Show          off
+      }
+      Parameter {
+        Variable      "i_init"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Resistor
+      Name          "R6"
+      Show          on
+      Position      [925, 540]
+      Direction     right
+      Flipped       off
+      Parameter {
+        Variable      "R"
+        Value         "2000"
+        Show          off
+      }
+    }
+    Component {
+      Type          Reference
+      SrcComponent  "Components/Electrical/Electronics/Op-Amp"
+      Name          "Op-Amp1"
+      Show          on
+      Position      [1015, 550]
+      Direction     up
+      Flipped       on
+      Frame         [-20, -20; 20, 20]
+      LabelPosition [0, 23]
+      LabelAlign    up
+      Parameter {
+        Variable      "A"
+        Value         "1e6"
+        Show          off
+      }
+      Terminal {
+        Type          Port
+        Position      [-25, -10]
+        Direction     left
+      }
+      Terminal {
+        Type          Port
+        Position      [-25, 10]
+        Direction     left
+      }
+      Terminal {
+        Type          Port
+        Position      [25, 0]
+        Direction     right
+      }
+      Terminal {
+        Type          Port
+        Position      [0, 15]
+        Direction     down
+      }
+    }
+    Component {
+      Type          Resistor
+      Name          "Feedback R11"
+      Show          on
+      Position      [1005, 490]
+      Direction     right
+      Flipped       off
+      Parameter {
+        Variable      "R"
+        Value         "20000"
+        Show          off
+      }
+    }
+    Component {
+      Type          Inductor
+      Name          "L4"
+      Show          on
+      Position      [855, 590]
+      Direction     left
+      Flipped       off
+      Parameter {
+        Variable      "L"
+        Value         ".003"
+        Show          off
+      }
+      Parameter {
+        Variable      "i_init"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Resistor
+      Name          "R7"
+      Show          on
+      Position      [925, 590]
+      Direction     right
+      Flipped       off
+      Parameter {
+        Variable      "R"
+        Value         "2000"
+        Show          off
+      }
+    }
+    Component {
+      Type          Inductor
+      Name          "L5"
+      Show          on
+      Position      [895, 750]
+      Direction     left
+      Flipped       off
+      Parameter {
+        Variable      "L"
+        Value         ".003"
+        Show          off
+      }
+      Parameter {
+        Variable      "i_init"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Resistor
+      Name          "R8"
+      Show          on
+      Position      [965, 750]
+      Direction     right
+      Flipped       off
+      Parameter {
+        Variable      "R"
+        Value         "2000"
+        Show          off
+      }
+    }
+    Component {
+      Type          Reference
+      SrcComponent  "Components/Electrical/Electronics/Op-Amp"
+      Name          "Op-Amp2"
+      Show          on
+      Position      [1055, 760]
+      Direction     up
+      Flipped       on
+      Frame         [-20, -20; 20, 20]
+      LabelPosition [0, 23]
+      LabelAlign    up
+      Parameter {
+        Variable      "A"
+        Value         "1e6"
+        Show          off
+      }
+      Terminal {
+        Type          Port
+        Position      [-25, -10]
+        Direction     left
+      }
+      Terminal {
+        Type          Port
+        Position      [-25, 10]
+        Direction     left
+      }
+      Terminal {
+        Type          Port
+        Position      [25, 0]
+        Direction     right
+      }
+      Terminal {
+        Type          Port
+        Position      [0, 15]
+        Direction     down
+      }
+    }
+    Component {
+      Type          Resistor
+      Name          "Feedback R12"
+      Show          on
+      Position      [1050, 695]
+      Direction     right
+      Flipped       off
+      Parameter {
+        Variable      "R"
+        Value         "20000"
+        Show          off
+      }
+    }
+    Component {
+      Type          Inductor
+      Name          "L6"
+      Show          on
+      Position      [895, 800]
+      Direction     left
+      Flipped       off
+      Parameter {
+        Variable      "L"
+        Value         ".003"
+        Show          off
+      }
+      Parameter {
+        Variable      "i_init"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Resistor
+      Name          "R9"
+      Show          on
+      Position      [965, 800]
+      Direction     right
+      Flipped       off
+      Parameter {
+        Variable      "R"
+        Value         "2000"
+        Show          off
+      }
+    }
+    Component {
+      Type          Capacitor
+      Name          "Parasitic Capacitor1"
+      Show          on
+      Position      [1005, 160]
+      Direction     down
+      Flipped       on
+      Parameter {
+        Variable      "C"
+        Value         "100e-6"
+        Show          off
+      }
+      Parameter {
+        Variable      "v_init"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Inductor
+      Name          "Choke L7"
+      Show          on
+      Position      [625, 340]
+      Direction     down
+      Flipped       off
+      Parameter {
+        Variable      "L"
+        Value         "0.003"
+        Show          off
+      }
+      Parameter {
+        Variable      "i_init"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Inductor
+      Name          "Choke L8"
+      Show          on
+      Position      [625, 575]
+      Direction     down
+      Flipped       off
+      Parameter {
+        Variable      "L"
+        Value         ".003"
+        Show          off
+      }
+      Parameter {
+        Variable      "i_init"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          VarResistorConstInductor
+      Name          "Resonator2"
+      Show          on
+      Position      [790, 445]
+      Direction     down
+      Flipped       off
+      Parameter {
+        Variable      "L"
+        Value         ".003"
+        Show          off
+      }
+      Parameter {
+        Variable      "i_init"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Capacitor
+      Name          "Parasitic Capacitor2"
+      Show          on
+      Position      [925, 445]
+      Direction     down
+      Flipped       on
+      Parameter {
+        Variable      "C"
+        Value         "100e-6"
+        Show          off
+      }
+      Parameter {
+        Variable      "v_init"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Ground
+      Name          "Ground1"
+      Show          off
+      Position      [1325, 615]
+      Direction     up
+      Flipped       off
+    }
+    Component {
+      Type          VarResistorConstInductor
+      Name          "Resonator3"
+      Show          on
+      Position      [865, 650]
+      Direction     down
+      Flipped       off
+      Parameter {
+        Variable      "L"
+        Value         ".003"
+        Show          off
+      }
+      Parameter {
+        Variable      "i_init"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Capacitor
+      Name          "Parasitic Capacitor3"
+      Show          on
+      Position      [1000, 650]
+      Direction     down
+      Flipped       on
+      Parameter {
+        Variable      "C"
+        Value         "100e-6"
+        Show          off
+      }
+      Parameter {
+        Variable      "v_init"
+        Value         "0"
+        Show          off
+      }
+    }
+    Component {
+      Type          Resistor
+      Name          "R13"
+      Show          on
+      Position      [665, 320]
+      Direction     up
+      Flipped       off
+      Parameter {
+        Variable      "R"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          DCVoltageSource
+      Name          "V_dc3"
+      Show          on
+      Position      [1025, 335]
+      Direction     down
+      Flipped       on
+      Parameter {
+        Variable      "V"
+        Value         "5"
+        Show          on
+      }
+    }
+    Component {
+      Type          Ground
+      Name          "Ground2"
+      Show          off
+      Position      [1025, 390]
+      Direction     up
+      Flipped       off
+    }
+    Component {
+      Type          DCVoltageSource
+      Name          "V_dc4"
+      Show          on
+      Position      [1095, 555]
+      Direction     down
+      Flipped       on
+      Parameter {
+        Variable      "V"
+        Value         "5"
+        Show          on
+      }
+    }
+    Component {
+      Type          Ground
+      Name          "Ground3"
+      Show          off
+      Position      [1095, 610]
+      Direction     up
+      Flipped       off
+    }
+    Component {
+      Type          DCVoltageSource
+      Name          "V_dc5"
+      Show          on
+      Position      [1135, 765]
+      Direction     down
+      Flipped       on
+      Parameter {
+        Variable      "V"
+        Value         "5"
+        Show          on
+      }
+    }
+    Component {
+      Type          Ground
+      Name          "Ground4"
+      Show          off
+      Position      [1135, 820]
+      Direction     up
+      Flipped       off
+    }
+    Component {
+      Type          Resistor
+      Name          "R14"
+      Show          on
+      Position      [670, 535]
+      Direction     up
+      Flipped       off
+      Parameter {
+        Variable      "R"
+        Value         "1"
+        Show          off
+      }
+    }
+    Component {
+      Type          Resistor
+      Name          "R15"
+      Show          on
+      Position      [650, 665]
+      Direction     up
+      Flipped       off
+      Parameter {
+        Variable      "R"
+        Value         "1"
+        Show          off
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "D2"
+      SrcTerminal   2
+      Points        [330, 305; 330, 275]
+      Branch {
+        Points        [330, 240]
+        DstComponent  "D1"
+        DstTerminal   1
+      }
+      Branch {
+        Points        [200, 275]
+        DstComponent  "V_dc"
+        DstTerminal   1
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "D4"
+      SrcTerminal   1
+      Points        [495, 435]
+      DstComponent  "C2"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "D3"
+      SrcTerminal   2
+      Points        [495, 370]
+      DstComponent  "C2"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "V_dc"
+      SrcTerminal   2
+      Points        [200, 630]
+      Branch {
+        Points        [200, 725]
+        Branch {
+          DstComponent  "Ground"
+          DstTerminal   1
+        }
+        Branch {
+          Points        [330, 725]
+          DstComponent  "V_dc2"
+          DstTerminal   2
+        }
+      }
+      Branch {
+        Points        [275, 630]
+        DstComponent  "V_dc1"
+        DstTerminal   2
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "D5"
+      SrcTerminal   2
+      Points        [485, 540]
+      DstComponent  "C3"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "D6"
+      SrcTerminal   1
+      Points        [485, 605]
+      DstComponent  "C3"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "D2"
+      SrcTerminal   1
+      Points        [460, 305]
+      Branch {
+        DstComponent  "C1"
+        DstTerminal   2
+      }
+      Branch {
+        Points        [520, 305]
+        Branch {
+          DstComponent  "R1"
+          DstTerminal   2
+        }
+        Branch {
+          Points        [625, 305]
+          DstComponent  "Choke L7"
+          DstTerminal   2
+        }
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "D1"
+      SrcTerminal   2
+      Points        [460, 240]
+      Branch {
+        DstComponent  "C1"
+        DstTerminal   1
+      }
+      Branch {
+        Points        [520, 240]
+        Branch {
+          DstComponent  "R1"
+          DstTerminal   1
+        }
+        Branch {
+          Points        [570, 240]
+          Branch {
+            Points        [695, 240]
+            Branch {
+              Points        [790, 240]
+              DstComponent  "Resonator1"
+              DstTerminal   1
+            }
+            Branch {
+              Points        [695, 800]
+              DstComponent  "L6"
+              DstTerminal   1
+            }
+          }
+          Branch {
+            Points        [570, 285; 765, 285]
+            DstComponent  "L1"
+            DstTerminal   1
+          }
+        }
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "L1"
+      SrcTerminal   2
+      DstComponent  "R4"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "FeedbackR10"
+      SrcTerminal   1
+      Points        [985, 265; 985, 330]
+      DstComponent  "Op-Amp"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "L2"
+      SrcTerminal   2
+      DstComponent  "R5"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "R2"
+      SrcTerminal   1
+      Points        [555, 370]
+      Branch {
+        Points        [495, 370]
+      }
+      Branch {
+        Points        [720, 370]
+        Branch {
+          Points        [740, 370]
+          Branch {
+            DstComponent  "L2"
+            DstTerminal   1
+          }
+          Branch {
+            Points        [740, 485]
+            DstComponent  "Resonator2"
+            DstTerminal   1
+          }
+        }
+        Branch {
+          Points        [720, 540; 810, 540]
+          Branch {
+            DstComponent  "L3"
+            DstTerminal   1
+          }
+          Branch {
+            Points        [810, 710; 865, 710]
+            DstComponent  "Resonator3"
+            DstTerminal   1
+          }
+        }
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "R4"
+      SrcTerminal   1
+      Points        [900, 320]
+      Branch {
+        DstComponent  "Op-Amp"
+        DstTerminal   2
+      }
+      Branch {
+        Points        [900, 265]
+        DstComponent  "FeedbackR10"
+        DstTerminal   2
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "L3"
+      SrcTerminal   2
+      DstComponent  "R6"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "Feedback R11"
+      SrcTerminal   1
+      Points        [1050, 490; 1050, 550]
+      DstComponent  "Op-Amp1"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "L4"
+      SrcTerminal   2
+      DstComponent  "R7"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "R6"
+      SrcTerminal   1
+      Points        [970, 540]
+      Branch {
+        DstComponent  "Op-Amp1"
+        DstTerminal   2
+      }
+      Branch {
+        Points        [970, 490]
+        DstComponent  "Feedback R11"
+        DstTerminal   2
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "R3"
+      SrcTerminal   1
+      Points        [545, 540; 530, 540]
+      Branch {
+        Points        [485, 540]
+      }
+      Branch {
+        Points        [530, 500; 705, 500; 705, 590; 785, 590]
+        Branch {
+          DstComponent  "L4"
+          DstTerminal   1
+        }
+        Branch {
+          Points        [785, 750]
+          DstComponent  "L5"
+          DstTerminal   1
+        }
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "L5"
+      SrcTerminal   2
+      DstComponent  "R8"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "Feedback R12"
+      SrcTerminal   1
+      Points        [1100, 695; 1100, 760]
+      DstComponent  "Op-Amp2"
+      DstTerminal   3
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "L6"
+      SrcTerminal   2
+      DstComponent  "R9"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "R8"
+      SrcTerminal   1
+      Points        [1010, 750]
+      Branch {
+        DstComponent  "Op-Amp2"
+        DstTerminal   2
+      }
+      Branch {
+        Points        [1010, 695]
+        DstComponent  "Feedback R12"
+        DstTerminal   2
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "D4"
+      SrcTerminal   2
+      Points        [405, 400]
+      Branch {
+        DstComponent  "D3"
+        DstTerminal   1
+      }
+      Branch {
+        Points        [275, 400]
+        DstComponent  "V_dc1"
+        DstTerminal   1
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "D5"
+      SrcTerminal   1
+      Points        [395, 575]
+      Branch {
+        Points        [395, 605]
+        DstComponent  "D6"
+        DstTerminal   2
+      }
+      Branch {
+        Points        [330, 575]
+        DstComponent  "V_dc2"
+        DstTerminal   1
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "Resonator1"
+      SrcTerminal   2
+      Points        [1005, 120]
+      DstComponent  "Parasitic Capacitor1"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "R3"
+      SrcTerminal   2
+      Points        [545, 605]
+      Branch {
+        Points        [485, 605]
+      }
+      Branch {
+        Points        [625, 605]
+        DstComponent  "Choke L8"
+        DstTerminal   1
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "Parasitic Capacitor2"
+      SrcTerminal   1
+      Points        [925, 405]
+      DstComponent  "Resonator2"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "Parasitic Capacitor2"
+      SrcTerminal   2
+      Points        [1325, 455]
+      Branch {
+        Points        [1325, 520]
+        Branch {
+          DstComponent  "Ground1"
+          DstTerminal   1
+        }
+        Branch {
+          Points        [1300, 520; 1300, 660]
+          DstComponent  "Parasitic Capacitor3"
+          DstTerminal   2
+        }
+      }
+      Branch {
+        Points        [1325, 205; 1005, 205]
+        DstComponent  "Parasitic Capacitor1"
+        DstTerminal   2
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "Parasitic Capacitor3"
+      SrcTerminal   1
+      Points        [1000, 610]
+      DstComponent  "Resonator3"
+      DstTerminal   2
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "R5"
+      SrcTerminal   1
+      Points        [890, 370]
+      Branch {
+        Points        [900, 370; 900, 340]
+        DstComponent  "Op-Amp"
+        DstTerminal   1
+      }
+      Branch {
+        Points        [890, 300]
+        DstComponent  "R13"
+        DstTerminal   1
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "R2"
+      SrcTerminal   2
+      Points        [555, 435]
+      Branch {
+        Points        [495, 435]
+      }
+      Branch {
+        Points        [625, 435]
+        Branch {
+          Points        [650, 435]
+          Branch {
+            Points        [665, 435]
+            Branch {
+              DstComponent  "R13"
+              DstTerminal   2
+            }
+            Branch {
+              Points        [670, 435]
+              DstComponent  "R14"
+              DstTerminal   1
+            }
+          }
+          Branch {
+            DstComponent  "R15"
+            DstTerminal   1
+          }
+        }
+        Branch {
+          DstComponent  "Choke L7"
+          DstTerminal   1
+        }
+        Branch {
+          DstComponent  "Choke L8"
+          DstTerminal   2
+        }
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "V_dc3"
+      SrcTerminal   1
+      DstComponent  "Op-Amp"
+      DstTerminal   4
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "V_dc3"
+      SrcTerminal   2
+      DstComponent  "Ground2"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "V_dc4"
+      SrcTerminal   2
+      DstComponent  "Ground3"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "V_dc4"
+      SrcTerminal   1
+      DstComponent  "Op-Amp1"
+      DstTerminal   4
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "V_dc5"
+      SrcTerminal   2
+      DstComponent  "Ground4"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "Op-Amp2"
+      SrcTerminal   4
+      DstComponent  "V_dc5"
+      DstTerminal   1
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "R7"
+      SrcTerminal   1
+      Points        [970, 590; 970, 570]
+      Branch {
+        Points        [970, 560]
+        DstComponent  "Op-Amp1"
+        DstTerminal   1
+      }
+      Branch {
+        Points        [670, 570]
+        DstComponent  "R14"
+        DstTerminal   2
+      }
+    }
+    Connection {
+      Type          Wire
+      SrcComponent  "R9"
+      SrcTerminal   1
+      Points        [1010, 800; 1010, 775]
+      Branch {
+        Points        [1010, 770]
+        DstComponent  "Op-Amp2"
+        DstTerminal   1
+      }
+      Branch {
+        Points        [650, 775]
+        DstComponent  "R15"
+        DstTerminal   2
+      }
+    }
+    Annotation {
+      Name          "<html><body>\n<p align=\"center\"><span style=\" font-siz"
+"e:20px; font-weight:600;\">PROXIMITY SENSOR</span></p>\n<p> </p></body></html"
+">"
+      Position      [655, 60]
+    } 
+  }
+}
