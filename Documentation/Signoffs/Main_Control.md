@@ -23,6 +23,7 @@ The main control will receive an input from the user interface subsystem and pro
 The main control will receive inputs from the safety, localization, and power subsystems. It will compare these inputs to expected values and if there is a discrepancy, an error will be reported. The error or errors will then be processed and a course of action will be determined based on number of errors, error details, severity of errors, and other data provided to or processed by the main control subsystem.
 ### Power
 ![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/Main%20Control%20Current%20Graph.PNG)
+
 The Raspberry Pi 3 B receives 5V and 2.5A[1] from the power subsystem.
 
 ## BOM
