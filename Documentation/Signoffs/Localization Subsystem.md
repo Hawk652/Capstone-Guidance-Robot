@@ -8,9 +8,8 @@ The localization subsystem (Fig. 1) will be tasked with gathering and processing
 | No. | Specifications and Constraints | Origin | 
 |-|-|-| 
 | 1 | Shall guide users to within 1 m of their desired room | Supervisor: Dr. Van Neste 
-| 2 | Shall maintain a distance of 0.5 m from obstacles and people | Broader Implication
-| 3 | Shall not deviate from the expected path by more than 15 cm | Broader Implication
-| 4 | Shall detect the AuR's position to a precision of 15cm | Customer: Dr. Andy Pardue
+| 2 | Shall not deviate from the expected path by more than 15 cm | Broader Implication
+| 3 | Shall detect the AuR's position to a precision of 15cm | Customer: Dr. Andy Pardue
 
 ## Buildable Schematic
 ![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/localization%20circuit%20schematic.png)
