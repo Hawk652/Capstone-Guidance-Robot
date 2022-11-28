@@ -37,17 +37,19 @@ $ToF=\frac{(RR-SP)-(SR-RP) +(RF-SR)-(SF-RR)}{4}$
 
 These equations work by calculating the time between messages and using the speed of light to determine the distance between beacons. The coordinates are calculated by the ESP32 and sent from the ESP32 to the Raspberry PI via a wired connection using I2C protocol.
 
+Based on the article "Performance Comparison between Decawave DW1000 and DW3000 in low-power double side ranging applications"[4], if the UWB module is configured to use channel 9, the horizontal error after trilateration is 15 cm.
+
 ### Turtlebot:
 
 #### LIDAR:
-LiDar sensors collect depth information about the environment using a laser. A laser is pulsed from the sensor and photons are reflected back to the sensor [4]. This allows the sensor to know the distance between itself and the surface from which the photons were reflected. The sensor spins and collects many points in order to gather depth information surrounding the sensor. The depth data gathered by the LiDar sensor is sent to the OpenCR 1.0 via a wired connection using UART protocol. The OpenCR 1.0 will then take the depth data and send it to the Raspberry PI via a wired connection using UART protocol when prompted for the data by the Raspberry PI.
+LiDar sensors collect depth information about the environment using a laser. A laser is pulsed from the sensor and photons are reflected back to the sensor [5]. This allows the sensor to know the distance between itself and the surface from which the photons were reflected. The sensor spins and collects many points in order to gather depth information surrounding the sensor. The depth data gathered by the LiDar sensor is sent to the OpenCR 1.0 via a wired connection using UART protocol. The OpenCR 1.0 will then take the depth data and send it to the Raspberry PI via a wired connection using UART protocol when prompted for the data by the Raspberry PI.
 
 #### SLAM and ROS:
-As the AuR moves, data points are collected by the LiDar sensor and processed by a SLAM algorithm built into the ROS2, which is on board the TurtleBot3 [1]. The SLAM algorithm takes data points from the LiDar and creates a model of the environment [5]. The SLAM algorithm uses incoming points to estimate the location of the TurtleBot3 by comparing the value of the points to their expected values and making corrections as needed. This process is described by the probability:
+As the AuR moves, data points are collected by the LiDar sensor and processed by a SLAM algorithm built into the ROS2, which is on board the TurtleBot3 [1]. The SLAM algorithm takes data points from the LiDar and creates a model of the environment [6]. The SLAM algorithm uses incoming points to estimate the location of the TurtleBot3 by comparing the value of the points to their expected values and making corrections as needed. This process is described by the probability:
 
 $P(x_k, m|z0_k, u0_k, x_0)$
 
-Accuracy of SLAM is dependant on the quality of the LiDar sensor but can have error as low as "5 cm given that LiDar sensor depth accuracy already has 2-3 cm error" [6]. The type of SLAM algorithm used will also impact the accuracy of the model. This information means the constraints of being within 15 cm of the path and 1m of the destination, when used in conjunction with the UWB, can be fulfilled.
+Accuracy of SLAM is dependant on the quality of the LiDar sensor but can have error as low as "5 cm given that LiDar sensor depth accuracy already has 2-3 cm error" [7]. The type of SLAM algorithm used will also impact the accuracy of the model. This information means the constraints of being within 15 cm of the path and 1m of the destination, when used in conjunction with the UWB, can be fulfilled.
 
 ### Power:
 ![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/localization%20current%20graph.png)
@@ -65,9 +67,10 @@ The figure above shows the current draw for each component of the localization s
 ## References
 [1] Y.  Name,  “ROBOTIS  e-Manual,”  ROBOTIS  e-Manual.  https://emanual.robotis.com/docs/en/platform/turtlebot3/slam/  (accessed  Nov. 09, 2022).  
 [2] M. E. Rusli, M. Ali, N. Jamil, and M. M. Din, “An Improved Indoor  positioning Algorithm Based on RSSI-Trilateration Technique for Internet of Things (IOT),” 2016 International Conference on Computer and Communication Engineering (ICCCE), Jul. 2016, doi: 10.1109/iccce.2016.28.  
-[3] M.  Simek,  “Two  Way  Ranging  (TWR),”  Sewio  RTLS.  https://www.sewio.net/uwb-technology/two-way-ranging/  
-[4] “What  is  LiDar,  and  How  Does  it  Work?,”  J.D.  Power.  https://www.jdpower.com/cars/shopping-guides/what-is-LiDar-and-how-does-it-work (accessed Nov. 09, 2022).  
-[5] “The  definitive  guide  to  SLAM  &  mobile  mapping  technologies,” www.navvis.com.  https://www.navvis.com/technology/slam  (accessed Nov. 09, 2022).  
-[6] Team  Ouster,  “Guide  to  evaluating  SLAM,”  ouster.com.  https://ouster.com/blog/guide-to-evaluating-slam/  (accessed  Nov.  9,  2022).  
-[7] Z. Li, X. Li, G. Mou, D. Jiang, X. Bao, and Y. Wang, “Design of  localization System Based on Ultra-Wideband and Long Range Wire-less,” 2019 IEEE 11th International Conference on Advanced Infocomm Technology (ICAIT), Oct. 2019, doi: 0.1109/icait.2019.8935892.
+[3] M.  Simek,  “Two  Way  Ranging  (TWR),”  Sewio  RTLS.  https://www.sewio.net/uwb-technology/two-way-ranging/
+[4]T. Polonelli, S. Schläpfer, and M. Magno, “Performance Comparison between Decawave DW1000 and DW3000 in low-power double side ranging applications,” IEEE Xplore, Aug. 01, 2022. https://ieeexplore.ieee.org/document/9881375 (accessed Nov. 28, 2022).
+[5] “What  is  LiDar,  and  How  Does  it  Work?,”  J.D.  Power.  https://www.jdpower.com/cars/shopping-guides/what-is-LiDar-and-how-does-it-work (accessed Nov. 09, 2022).  
+[6] “The  definitive  guide  to  SLAM  &  mobile  mapping  technologies,” www.navvis.com.  https://www.navvis.com/technology/slam  (accessed Nov. 09, 2022).  
+[7] Team  Ouster,  “Guide  to  evaluating  SLAM,”  ouster.com.  https://ouster.com/blog/guide-to-evaluating-slam/  (accessed  Nov.  9,  2022).  
+[8] Z. Li, X. Li, G. Mou, D. Jiang, X. Bao, and Y. Wang, “Design of  localization System Based on Ultra-Wideband and Long Range Wire-less,” 2019 IEEE 11th International Conference on Advanced Infocomm Technology (ICAIT), Oct. 2019, doi: 0.1109/icait.2019.8935892.
 
