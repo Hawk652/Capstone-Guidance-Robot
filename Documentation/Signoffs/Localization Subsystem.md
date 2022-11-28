@@ -18,6 +18,11 @@ The values for required voltage and resistive load used in Fig. 2. were derived 
 
 ## Analysis
 
+## Code Flowchart
+![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/flowchart_localization.png)
+
+Here is a code flowchart that denotes the operation of the localization subsystem.
+
 ### UWB  Beacons:
 ![Alt text](https://cdn.discordapp.com/attachments/385728957950984195/1042643351914164255/Trilateration.png)
 
