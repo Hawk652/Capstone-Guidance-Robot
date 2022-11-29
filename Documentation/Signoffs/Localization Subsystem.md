@@ -17,8 +17,10 @@ The localization subsystem (Fig. 1) will be tasked with gathering and processing
 The values for required voltage and resistive load used in Fig. 2. were derived from the specification documents for the individual components.
 
 ![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/capstonelocalizationkicad.jpg)
-
 The image shows the connections between the components of the localization subsystem.
+
+![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/esp32wireless.jpg)
+This is the schematic of the wireless beacon that will be used to help locate the autonomous robot.
 
 ### Code Flowchart
 ![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/flowchart_localization.png)
