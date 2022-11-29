@@ -20,6 +20,7 @@ The values for required voltage and resistive load used in Fig. 2. were derived 
 The image shows the connections between the components of the localization subsystem.
 
 ![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/esp32wireless.jpg)
+
 This is the schematic of the wireless beacon that will be used to help locate the autonomous robot.
 
 ### Code Flowchart
