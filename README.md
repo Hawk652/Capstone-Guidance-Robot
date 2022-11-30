@@ -16,8 +16,7 @@ Here explain in more detail (though not as much as will be given in the datashee
 ## About Us
 
 ### Team
-
-Give a brief bio for each team member and their broad contribution to the project (no need to be terribly specifc).
+Samuel Mandody - Knowledgeable in Embedded Systems. Strong fundamental coding skills and quick learner. 
 
 ### Faculty Supervisor
 
