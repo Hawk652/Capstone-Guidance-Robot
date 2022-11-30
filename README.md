@@ -16,7 +16,7 @@ Here explain in more detail (though not as much as will be given in the datashee
 ## About Us
 
 ### Team
-Samuel Mandody - Knowledgeable in Embedded Systems. Strong fundamental coding skills and quick learner. 
+Samuel Mandody - Knowledgeable in Embedded Systems. Strong fundamental coding skills and quick learner. Loser of the team
 
 ### Faculty Supervisor
 
