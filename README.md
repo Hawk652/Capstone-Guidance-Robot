@@ -33,10 +33,10 @@ Use this space to recognize anyone that you feel has had an impact on the projec
 
 ## Repo Organization
 
-Give the layout of the repo and what can be found where. Make it easy on those who are interested by making the headings of the various things in this section clickable links to the relevant folder or file in the repo.
-
 ### [Reports](https://github.com/Hawk652/Capstone-Guidance-Robot/tree/main/Reports)
+The section contains the project proposal documents and the conceptual design and planning documents.
 
 ### [Documentation](https://github.com/Hawk652/Capstone-Guidance-Robot/tree/main/Documentation)
+The section contains the 3D models, electrical files, images of the project, and signoffs.
 
 ### [Software](https://github.com/Hawk652/Capstone-Guidance-Robot/tree/main/Software)
