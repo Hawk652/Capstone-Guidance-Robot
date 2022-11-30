@@ -18,6 +18,8 @@ Here explain in more detail (though not as much as will be given in the datashee
 ### Team
 [Samuel Mandody](https://www.youtube.com/watch?v=dQw4w9WgXcQ) - Knowledgeable in Embedded Systems. Strong fundamental coding skills and quick learner. Loser of the team
 
+[Gabriel Kim](https://www.youtube.com/watch?v=dQw4w9WgXcQ) - Likes to program. Jack of no trades master of attempting a difficult degree paths. Average ESP32 enjoyer.
+
 ### Faculty Supervisor
 
 Dr. Charles Van Neste
