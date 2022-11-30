@@ -35,3 +35,8 @@ Use this space to recognize anyone that you feel has had an impact on the projec
 
 Give the layout of the repo and what can be found where. Make it easy on those who are interested by making the headings of the various things in this section clickable links to the relevant folder or file in the repo.
 
+### [Reports](https://github.com/Hawk652/Capstone-Guidance-Robot/tree/main/Reports)
+
+### [Documentation](https://github.com/Hawk652/Capstone-Guidance-Robot/tree/main/Documentation)
+
+### [Software](https://github.com/Hawk652/Capstone-Guidance-Robot/tree/main/Software)
