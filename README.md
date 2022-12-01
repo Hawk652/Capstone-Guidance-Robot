@@ -20,6 +20,8 @@ Here explain in more detail (though not as much as will be given in the datashee
 
 [Gabriel Kim](https://www.youtube.com/watch?v=dQw4w9WgXcQ) - Likes to program. Jack of no trades master of attempting a difficult degree paths. Average ESP32 enjoyer.
 
+Emma Brown - Enjoys designing and implemnting hardware. Willing to research adn a fast learner.  
+
 ### Faculty Supervisor
 
 Dr. Charles Van Neste
