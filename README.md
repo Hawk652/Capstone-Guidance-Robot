@@ -7,20 +7,24 @@ Give the elevator pitch and abstract for the project. It should allow interested
 
 ## Capabilities
 
-Here explain in more detail (though not as much as will be given in the datasheet) what the version of this project in this repo is capable of doing.
+The current version of the project serves as an oversized paperweight at the moment. 
 
 ## Salient Outcomes
 
+We learned that bluetooth 5.2 location services is not very accesible at the consumer level as of yet outside of heavy research or recent products. It's the reason why we ended up having to change to ultra wideband triangulation for location verification. We're also going to be learning about and implementing near field sensors as close range location verification with the assistance of Dr. Charles Van Neste More stuff will get added as we actually assemble the project.
+
 ## Project Demonstration & Images
+
+Nothing here yet but check back in a bit! 
 
 ## About Us
 
 ### Team
-[Samuel Mandody](https://www.youtube.com/watch?v=dQw4w9WgXcQ) - Knowledgeable in Embedded Systems. Strong fundamental coding skills and quick learner. Loser of the team
+[Samuel Mandody](https://www.youtube.com/watch?v=dQw4w9WgXcQ) - Knowledgeable in Embedded Systems. Strong fundamental coding skills and quick learner. Will be working on the locomotion subsystem and everywhere else coding related.
 
-[Gabriel Kim](https://www.youtube.com/watch?v=dQw4w9WgXcQ) - Likes to program. Jack of no trades master of attempting a difficult degree paths. Average ESP32 enjoyer.
+[Gabriel Kim](https://www.youtube.com/watch?v=dQw4w9WgXcQ) - Likes to program. Average ESP32 enjoyer. Working primarily on the software impementation of the main control subsystem. 
 
-Emma Brown - Enjoys designing and implemnting hardware. Willing to research adn a fast learner.  
+Emma Brown - Enjoys designing and implemnting hardware. Willing to research and a fast learner.  
 
 ### Faculty Supervisor
 
@@ -28,9 +32,9 @@ Dr. Charles Van Neste
 
 ### Stakeholders
 
-Tell a bit about the customer for the project. Also discuss any other groups (specific or general) that are expected to be impacted by the project.
+Dr. Andy Pardue is the individual who came up with the idea for this project. Students visitors and faculty alike will benefit from the guidance robot in the Engineering Building. Andre help
 
-### Recognitions
+### Recognitions Andre help
 
 Use this space to recognize anyone that you feel has had an impact on the project. Be sure to recognize the work of previous teams if you referenced it for style or content. 
 
