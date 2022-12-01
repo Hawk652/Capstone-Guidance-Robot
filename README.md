@@ -23,13 +23,13 @@ Nothing here yet but check back in a bit!
 [Samuel Mandody](
 https://www.youtube.com/watch?v=M5V_IXMewl4) - Knowledgeable in Embedded Systems. Strong fundamental coding skills and quick learner. Will be working on the locomotion subsystem and everywhere else coding related.
 
-[Gabriel Kim](https://www.youtube.com/watch?v=dQw4w9WgXcQ) - Electrical engineering major with a focus on smaller electronics. Working mainly on the main controll subsystem.
+[Gabriel Kim](https://www.youtube.com/watch?v=dQw4w9WgXcQ) - Electrical engineering major with a focus on smaller electronics. Working mainly on the main control subsystem.
 
-Emma Brown - Enjoys designing and implementing hardware. Willing to research and a fast learner.  
+Emma Brown - Enjoys designing and implementing hardware. Willing to research and a fast learner. In charge of the safety subsystem.
 
 [Andre Nguyen](https://www.youtube.com/watch?v=l60MnDJklnM) - Electrical Engineering major with a focus on power. In charge of the power subsystem. The designated team leader.
 
-Jacob Wilkinson - Electrical and Computer Engineering major with a focus on embedded software development. In charge of user interface.
+[Jacob Wilkinson](https://www.youtube.com/watch?v=GQHVQvePdtI) - Electrical and Computer Engineering major with a focus on embedded software development. In charge of user interface.
 
 ### Faculty Supervisor
 
