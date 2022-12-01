@@ -26,17 +26,24 @@ Nothing here yet but check back in a bit!
 
 Emma Brown - Enjoys designing and implemnting hardware. Willing to research and a fast learner.  
 
+Andre Nskladbgfhjvkasbw - poopoo head
+
+Jacob Wilkinson - Brings awesomeness
+
 ### Faculty Supervisor
 
 Dr. Charles Van Neste
 
 ### Stakeholders
 
-Dr. Andy Pardue is the individual who came up with the idea for this project. Students visitors and faculty alike will benefit from the guidance robot in the Engineering Building. Andre help
+Dr. Andy Pardue is the individual who came up with the idea for this project. Occupants of the Ashraf Islam Building alike will benefit from the guidance robot. 
 
-### Recognitions Andre help
+### Recognitions 
 
-Use this space to recognize anyone that you feel has had an impact on the project. Be sure to recognize the work of previous teams if you referenced it for style or content. 
+A special thank you to:
+Tristain Hill for providing us with the Turtlebot
+Dr. Stephen Canefield for assisting us with the software implementation of the robot.
+Dr. Andy Pardue for investing in the project.
 
 ## Repo Organization
 
