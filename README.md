@@ -27,7 +27,7 @@ https://www.youtube.com/watch?v=M5V_IXMewl4) - Knowledgeable in Embedded Systems
 
 Emma Brown - Enjoys designing and implementing hardware. Willing to research and a fast learner.  
 
-Andre Nskladbgfhjvkasbw - poopoo head
+[Andre Nguyen](https://www.youtube.com/watch?v=l60MnDJklnM) - Electrical Engineering major with a focus on power. In charge of the power subsystem. The designated team leader.
 
 Jacob Wilkinson - Electrical and Computer Engineering major with a focus on embedded software development. In charge of user interface.
 
@@ -59,3 +59,4 @@ The section contains the 3D models, electrical files, images of the project, and
 #### [Signoffs](https://github.com/Hawk652/Capstone-Guidance-Robot/tree/main/Documentation/Signoffs)
 
 ### [Software](https://github.com/Hawk652/Capstone-Guidance-Robot/tree/main/Software)
+The section will contain all software related to the project.
