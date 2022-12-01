@@ -37,14 +37,13 @@ Dr. Charles Van Neste
 
 ### Stakeholders
 
-Dr. Andy Pardue is the individual who came up with the idea for this project. Occupants of the Ashraf Islam Building alike will benefit from the guidance robot. 
+Dr. Andy Pardue is the customer and individual who came up with the idea for this project. Occupants of the Ashraf Islam Building alike will benefit from the guidance robot. 
 
 ### Recognitions 
 
 A special thank you to:
 Tristain Hill for providing us with the Turtlebot
 Dr. Stephen Canefield for assisting us with the software implementation of the robot.
-Dr. Andy Pardue for investing in the project.
 
 ## Repo Organization
 
