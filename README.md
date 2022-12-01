@@ -52,7 +52,7 @@ Dr. Andy Pardue for investing in the project.
 The section contains the project proposal documents and the conceptual design and planning documents.
 
 ### [Documentation](https://github.com/Hawk652/Capstone-Guidance-Robot/tree/main/Documentation)
-The section contains the 3D models, electrical files, images of the project, and signoffs.
+The section contains the 3D models, electrical files, images related to the project, and signoffs.
 #### [3D Models](https://github.com/Hawk652/Capstone-Guidance-Robot/tree/main/Documentation/3D%20Models)
 #### [Electrical](https://github.com/Hawk652/Capstone-Guidance-Robot/tree/main/Documentation/Electrical)
 #### [Images](https://github.com/Hawk652/Capstone-Guidance-Robot/tree/main/Documentation/Images)
