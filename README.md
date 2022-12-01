@@ -20,11 +20,12 @@ Nothing here yet but check back in a bit!
 ## About Us
 
 ### Team
-[Samuel Mandody](https://www.youtube.com/watch?v=dQw4w9WgXcQ) - Knowledgeable in Embedded Systems. Strong fundamental coding skills and quick learner. Will be working on the locomotion subsystem and everywhere else coding related.
+[Samuel Mandody](
+https://www.youtube.com/watch?v=M5V_IXMewl4) - Knowledgeable in Embedded Systems. Strong fundamental coding skills and quick learner. Will be working on the locomotion subsystem and everywhere else coding related.
 
 [Gabriel Kim](https://www.youtube.com/watch?v=dQw4w9WgXcQ) - Likes to program. Average ESP32 enjoyer. Working primarily on the software impementation of the main control subsystem. 
 
-Emma Brown - Enjoys designing and implemnting hardware. Willing to research and a fast learner.  
+Emma Brown - Enjoys designing and implementing hardware. Willing to research and a fast learner.  
 
 Andre Nskladbgfhjvkasbw - poopoo head
 
