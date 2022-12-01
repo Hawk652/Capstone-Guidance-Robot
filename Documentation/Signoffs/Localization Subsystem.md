@@ -24,9 +24,9 @@ The image shows the connections between the components of the localization subsy
 This is the schematic of the wireless beacon that will be used to help locate the autonomous robot.
 
 ### Code Flowchart
-![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/flowchart_localization.png)
+![Flowchart](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/flowchart_localization.png)
 
-Here is a code flowchart that denotes the operation of the localization subsystem.
+The above figure is a flowchart showing the general functionality of this subsystem's software. When the AuR is turned on, the localization subsystem initializes itself and validates that all components are responsive. Once it has done this, it waits for a localization request from the main control. When a localization request is receieved, the localization subsystem estimates the AuR's position using the LIDAR and a SLAM, Simultaneous Localization And Mapping, algorithm. Once this is complete, the subsystem finds the RSSI, the Received Signal Strength Indicator, of nearby ultra-wideband beacons in order to triangulate its position in relation to those beacons. Once both localization methods are complete, the localization subsystem will compare the two results. If the results disagree, the localization subsystem will recheck its position using both method. Once both results agree, the localization subsystem will send the location data back to the main control and wait until another request is received.
 
 ## Analysis
 
