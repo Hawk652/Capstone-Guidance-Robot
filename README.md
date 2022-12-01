@@ -3,7 +3,7 @@
 
 ## Executive Summary
 
-Enterintg a building for the first time can be confusing. An insuffieicnt amount of information is typically provided to help one traverse a new building. With the new Ashraf Islam Engineering Buidling that is currently being built for Tennessee Technological University, the same issues will occur. The focus of the capstone project is to provide a solution to the problem. The solution is a autonoumous greeting and guidance robot that will assist people in navigating the Ashraf Islam Engineering Building. 
+Entering a building for the first time can be confusing. An insuffieicnt amount of information is typically provided to help one traverse a new building. With the new Ashraf Islam Engineering Buidling that is currently being built for Tennessee Technological University, the same issues will occur. The focus of the capstone project is to provide a solution to the problem. The solution is a autonoumous greeting and guidance robot that will assist people in navigating the Ashraf Islam Engineering Building. 
 
 ## Capabilities
 
