@@ -19,9 +19,20 @@ The values for required voltage and resistive load used in Fig. 2. were derived 
 ![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/capstonelocalizationkicad.jpg)
 The image shows the connections between the components of the localization subsystem.
 
+### Beacon
 ![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/esp32wireless.jpg)
 
 This is the schematic of the wireless beacon that will be used to help locate the autonomous robot.
+
+![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/localization%20beacon%20box%20lid.png)
+
+![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/localization%20beacon%20box.png)
+
+Here are the 3d models for the housing unit of the beacons. The dimensions of the housing unit is 19.3 x 8.15 x 7.62 $cm^3$.
+
+![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/localization%20beacon%20placement.png)
+
+The figure shows the beacons will be placed a little above the door frames in hallways. The beacons will be about 2 m from the floor. The housing units for the beacons will be attached to the wall using command strips. 
 
 ### Code Flowchart
 ![Flowchart](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/flowchart_localization.png)
