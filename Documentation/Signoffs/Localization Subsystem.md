@@ -28,7 +28,7 @@ This is the schematic of the wireless beacon that will be used to help locate th
 
 ![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/localization%20beacon%20box.png)
 
-Here are the 3d models for the housing unit of the beacons. The dimensions of the housing unit is 19.3 x 8.15 x 7.62 $cm^3$.
+Here are the 3d models for the housing unit of the beacons. The dimensions of the housing unit is 19.3 x 8.15 x 7.62 $cm^3$. The housing unit will contain a breadboard, a 9v battery, a 9v to 5v dc to dc converter, and an ESP32 UWB development board.
 
 ![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/localization%20beacon%20placement.png)
 
@@ -85,8 +85,13 @@ The figure above shows the current draw for each component of the localization s
 | OpenCR1.0 | 1 | $215.00 | Already Purchased | 
 | Raspberry Pi3 B+ | 1 | $35.00 | Already Purchased |
 | LDS-01 | 1 | $200.00 | Already Purchased |
-| ESP32UWB DW3000 | 5 | $40.00 | $200.00 | 
-| | | Total Subsystem Cost: | $200.00|
+| PLA Filament Roll | 1 | $19.00 | $19.00 |
+| 1/4" Hex Nuts(50) | 1 | $8.00 | $8.00 |
+| 1/4" Hex Bolts(25) | 1 | $7.00 | $7.00 |
+| 9v-5v Step DC-DC Converter(5) | 1 | $10.00 | $10.00 |
+| Breadboards(3) | 1 | $10.00 | $10.00 |
+| ESP32UWB DW3000 | 5 | $40.00 | $200.00 |
+| | | Total Subsystem Cost: | $254.00|
 
 ## References
 [1] Y.  Name,  “ROBOTIS  e-Manual,”  ROBOTIS  e-Manual.  https://emanual.robotis.com/docs/en/platform/turtlebot3/slam/  (accessed  Nov. 09, 2022).  
