@@ -29,7 +29,7 @@ Emma Brown - Enjoys designing and implementing hardware. Willing to research and
 
 Andre Nskladbgfhjvkasbw - poopoo head
 
-Jacob Wilkinson - Brings awesomeness
+Jacob Wilkinson - Electrical and Computer Engineering major with a focus on embedded software development. In charge of user interface.
 
 ### Faculty Supervisor
 
