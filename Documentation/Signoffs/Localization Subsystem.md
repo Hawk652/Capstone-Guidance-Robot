@@ -65,19 +65,18 @@ $ToF=\frac{(RR-SP)-(SR-RP) +(RF-SR)-(SF-RR)}{4}$
 
 These equations work by calculating the time between messages and using the speed of light to determine the distance between beacons. The coordinates are calculated by the ESP32 and sent from the ESP32 to the Raspberry PI via a wired connection using I2C protocol.
 
-Based on the article "Performance Comparison between Decawave DW1000 and DW3000 in low-power double side ranging applications"[4] and “Design of  localization System Based on Ultra-Wideband and Long Range Wire-less,”[5] if the UWB module is configured to use channel 9, the horizontal error after trilateration is 15 cm.
-
+Based on the tests performed and documented by the articles "Performance Comparison between Decawave DW1000 and DW3000 in low-power double side ranging applications"[4] and “Design of  localization System Based on Ultra-Wideband and Long Range Wire-less,”[5] we can meet the constraint of having less than 15 cm of horizontal error. The DW3000 can be configured to operate on a range of channels which refer to the device's operating frequency and bandwidth. An error of 15 cm was achieved with the DW3000's channel 9 configuration. Channel 9 was chosen for its higher frequency which encounters less environmental interference and can therefore provide more acurate measurements when compared to other channels. Channel 9 has a frequency of 7987.2 MHz and a bandwidth of 499.2 MHz[6].
 ### Turtlebot:
 
 #### LIDAR:
-LIDAR sensors collect depth information about the environment using a laser. A laser is pulsed from the sensor and photons are reflected back to the sensor [6]. This allows the sensor to know the distance between itself and the surface from which the photons were reflected. The sensor spins and collects many points in order to gather depth information surrounding the sensor. The depth data gathered by the LIDAR sensor is sent to the Raspberry PI and then to the OpenCR 1.0 via a usb connection. The OpenCR 1.0 will then take the depth data and process it to send back to the Raspberry PI via a usb connection.
+LIDAR sensors collect depth information about the environment using a laser. A laser is pulsed from the sensor and photons are reflected back to the sensor [8]. This allows the sensor to know the distance between itself and the surface from which the photons were reflected. The sensor spins and collects many points in order to gather depth information surrounding the sensor. The depth data gathered by the LIDAR sensor is sent to the Raspberry PI and then to the OpenCR 1.0 via a usb connection. The OpenCR 1.0 will then take the depth data and process it to send back to the Raspberry PI via a usb connection.
 
 #### SLAM and ROS:
-As the AuR moves, data points are collected by the LIDAR sensor and processed by a SLAM algorithm built into the ROS2, which is on board the TurtleBot3 [1]. The SLAM algorithm takes data points from the LIDAR and creates a model of the environment [7]. The SLAM algorithm uses incoming points to estimate the location of the TurtleBot3 by comparing the value of the points to their expected values and making corrections as needed. This process is described by the probability:
+As the AuR moves, data points are collected by the LIDAR sensor and processed by a SLAM algorithm built into the ROS2, which is on board the TurtleBot3 [1]. The SLAM algorithm takes data points from the LIDAR and creates a model of the environment [8]. The SLAM algorithm uses incoming points to estimate the location of the TurtleBot3 by comparing the value of the points to their expected values and making corrections as needed. This process is described by the probability:
 
 $P(x_k, m|z0_k, u0_k, x_0)$
 
-Accuracy of SLAM is dependant on the quality of the LIDAR sensor but can have error as low as "5 cm given that LIDAR sensor depth accuracy already has 2-3 cm error" [8]. The type of SLAM algorithm used will also impact the accuracy of the model. This information means the constraints of being within 15 cm of the path and 1m of the destination, when used in conjunction with the UWB, can be fulfilled.
+Accuracy of SLAM is dependant on the quality of the LIDAR sensor but can have error as low as "5 cm given that LIDAR sensor depth accuracy already has 2-3 cm error" [9]. The type of SLAM algorithm used will also impact the accuracy of the model. This information means the constraints of being within 15 cm of the path and 1m of the destination, when used in conjunction with the UWB, can be fulfilled.
 
 ### Power:
 ![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/localization/localization%20current%20graph.png)
@@ -108,9 +107,11 @@ The figure above shows the current draw for each component of the localization s
 
 [5] Z. Li, X. Li, G. Mou, D. Jiang, X. Bao, and Y. Wang, “Design of  localization System Based on Ultra-Wideband and Long Range Wire-less,” 2019 IEEE 11th International Conference on Advanced Infocomm Technology (ICAIT), Oct. 2019, doi: 0.1109/icait.2019.8935892.
 
-[6] “What  is  LiDAR,  and  How  Does  it  Work?,”  J.D.  Power.  https://www.jdpower.com/cars/shopping-guides/what-is-LiDAR-and-how-does-it-work (accessed Nov. 09, 2022).  
+[6]DecaWave, “DW3000 Datasheet,” https://www.qorvo.com/. https://www.qorvo.com/products/d/da008142 (accessed Dec. 02, 2022).
 
-[7] “The  definitive  guide  to  SLAM  &  mobile  mapping  technologies,” www.navvis.com.  https://www.navvis.com/technology/slam  (accessed Nov. 09, 2022).  
+[7] “What  is  LiDAR,  and  How  Does  it  Work?,”  J.D.  Power.  https://www.jdpower.com/cars/shopping-guides/what-is-LiDAR-and-how-does-it-work (accessed Nov. 09, 2022).  
 
-[8] Team  Ouster,  “Guide  to  evaluating  SLAM,”  ouster.com.  https://ouster.com/blog/guide-to-evaluating-slam/  (accessed  Nov.  9,  2022).  
+[8] “The  definitive  guide  to  SLAM  &  mobile  mapping  technologies,” www.navvis.com.  https://www.navvis.com/technology/slam  (accessed Nov. 09, 2022).  
+
+[9] Team  Ouster,  “Guide  to  evaluating  SLAM,”  ouster.com.  https://ouster.com/blog/guide-to-evaluating-slam/  (accessed  Nov.  9,  2022).  
 
