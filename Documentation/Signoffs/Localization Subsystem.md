@@ -1,5 +1,5 @@
 # Localization Subsystem
-![Alt text](https://cdn.discordapp.com/attachments/385728957950984195/1042640894735695952/unnamed_1.png)
+![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/localization/unnamed_1.png)
 ## Function of the Subsystem
 The localization subsystem (Fig. 1) will be tasked with gathering and processing positional data points from sensors. The sensors shall all be mounted onboard the Turtlebot 3. The sensors that will gather data for this subsystem will be the LIDAR and the ESP32UWB DW3000. The LIDAR will gather data points from all reflective surfaces around it for the SLAM algorithm to determine the AuR's current location. The UWB (Ultra Wideband) module will determine the distance between itself and 2 other UWB modules using triangulation. The other 2 UWB modules will serve as a destination marker. Using all the prior mentioned data, the AuR will be able to determine its current location. The AuR will use the updated current position data along with the route data generated from the navigation subsystem to determine the deviation of the route. 
 
@@ -12,30 +12,30 @@ The localization subsystem (Fig. 1) will be tasked with gathering and processing
 | 3 | Shall detect the AuR's position to a precision of 15cm | Customer: Dr. Andy Pardue
 
 ## Buildable Schematic
-![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/localization%20circuit%20schematic.png)
+![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/localization/localization%20circuit%20schematic.png)
 
 The values for required voltage and resistive load used in Fig. 2. were derived from the specification documents for the individual components.
 
-![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/capstonelocalizationkicad.jpg)
+![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/localization/capstonelocalizationkicad.jpg)
 The image shows the connections between the components of the localization subsystem.
 
 ### Beacon
-![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/esp32wireless.jpg)
+![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/localization/esp32wireless.jpg)
 
 This is the schematic of the wireless beacon that will be used to help locate the autonomous robot.
 
-![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/localization%20beacon%20box%20lid.png)
+![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/localization/localization%20beacon%20box%20lid.png)
 
-![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/localization%20beacon%20box.png)
+![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/localization/localization%20beacon%20box.png)
 
 Here are the 3d models for the housing unit of the beacons. The dimensions of the housing unit is 19.3 x 8.15 x 7.62 $cm^3$. The housing unit will contain a breadboard, a 9v battery, a 9v to 5v dc to dc converter, and an ESP32 UWB development board.
 
-![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/localization%20beacon%20placement.png)
+![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/localization/localization%20beacon%20placement.png)
 
 The figure shows the beacons will be placed a little above the door frames in hallways. The beacons will be about 2 m from the floor. The housing units for the beacons will be attached to the wall using command strips. 
 
 ### Code Flowchart
-![Flowchart](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/flowchart_localization.png)
+![Flowchart](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/localization/flowchart_localization.png)
 
 The above figure is a flowchart showing the general functionality of this subsystem's software. When the AuR is turned on, the localization subsystem initializes itself and validates that all components are responsive. Once it has done this, it waits for a localization request from the main control. When a localization request is receieved, the localization subsystem estimates the AuR's position using the LIDAR and a SLAM, Simultaneous Localization And Mapping, algorithm. Once this is complete, the subsystem finds the RSSI, the Received Signal Strength Indicator, of nearby ultra-wideband beacons in order to triangulate its position in relation to those beacons. Once both localization methods are complete, the localization subsystem will compare the two results. If the results disagree, the localization subsystem will recheck its position using both method. Once both results agree, the localization subsystem will send the location data back to the main control and wait until another request is received.
 
@@ -43,7 +43,7 @@ The above figure is a flowchart showing the general functionality of this subsys
 
 
 ### UWB  Beacons:
-![Alt text](https://cdn.discordapp.com/attachments/385728957950984195/1042643351914164255/Trilateration.png)
+![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/localization/Trilateration.png)
 
 A UWB beacon-based solution was chosen for higher resolution localization since it is accurate to within 15 cm which aids the constraints of being within 15 cm of its path and within 1 m of its destination [1]. The UWB beacons will be ESP32 UWB DW3000 modules.
 
@@ -76,7 +76,7 @@ $P(x_k, m|z0_k, u0_k, x_0)$
 Accuracy of SLAM is dependant on the quality of the LIDAR sensor but can have error as low as "5 cm given that LIDAR sensor depth accuracy already has 2-3 cm error" [8]. The type of SLAM algorithm used will also impact the accuracy of the model. This information means the constraints of being within 15 cm of the path and 1m of the destination, when used in conjunction with the UWB, can be fulfilled.
 
 ### Power:
-![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/localization%20current%20graph.png)
+![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/localization/localization%20current%20graph.png)
 The figure above shows the current draw for each component of the localization subsystem.
 
 ## BOM
