@@ -1,7 +1,7 @@
 # Localization Subsystem
 ![Alt text](https://cdn.discordapp.com/attachments/385728957950984195/1042640894735695952/unnamed_1.png)
 ## Function of the Subsystem
-The localization subsystem (Fig. 1) will be tasked with gathering and processing positional data points from sensors. The sensors shall all be mounted onboard the Turtlebot 3. The sensors that will gather data for this subsystem will be the LiDar and the ESP32UWB DW3000. The LiDar will gather data points from all reflective surfaces around it for the SLAM algorithm to determine the AuR's current location. The UWB (Ultra Wideband) module will determine the distance between itself and 2 other UWB modules using triangulation. The other 2 UWB modules will serve as a destination marker. Using all the prior mentioned data, the AuR will be able to determine its current location. The AuR will use the updated current position data along with the route data generated from the navigation subsystem to determine the deviation of the route. 
+The localization subsystem (Fig. 1) will be tasked with gathering and processing positional data points from sensors. The sensors shall all be mounted onboard the Turtlebot 3. The sensors that will gather data for this subsystem will be the LIDAR and the ESP32UWB DW3000. The LIDAR will gather data points from all reflective surfaces around it for the SLAM algorithm to determine the AuR's current location. The UWB (Ultra Wideband) module will determine the distance between itself and 2 other UWB modules using triangulation. The other 2 UWB modules will serve as a destination marker. Using all the prior mentioned data, the AuR will be able to determine its current location. The AuR will use the updated current position data along with the route data generated from the navigation subsystem to determine the deviation of the route. 
 
 ## Specifications and Constraints
 
@@ -66,14 +66,14 @@ Based on the article "Performance Comparison between Decawave DW1000 and DW3000 
 ### Turtlebot:
 
 #### LIDAR:
-LiDar sensors collect depth information about the environment using a laser. A laser is pulsed from the sensor and photons are reflected back to the sensor [6]. This allows the sensor to know the distance between itself and the surface from which the photons were reflected. The sensor spins and collects many points in order to gather depth information surrounding the sensor. The depth data gathered by the LiDar sensor is sent to the Raspberry PI and then to the OpenCR 1.0 via a usb connection. The OpenCR 1.0 will then take the depth data and process it to send back to the Raspberry PI via a usb connection.
+LIDAR sensors collect depth information about the environment using a laser. A laser is pulsed from the sensor and photons are reflected back to the sensor [6]. This allows the sensor to know the distance between itself and the surface from which the photons were reflected. The sensor spins and collects many points in order to gather depth information surrounding the sensor. The depth data gathered by the LIDAR sensor is sent to the Raspberry PI and then to the OpenCR 1.0 via a usb connection. The OpenCR 1.0 will then take the depth data and process it to send back to the Raspberry PI via a usb connection.
 
 #### SLAM and ROS:
-As the AuR moves, data points are collected by the LiDar sensor and processed by a SLAM algorithm built into the ROS2, which is on board the TurtleBot3 [1]. The SLAM algorithm takes data points from the LiDar and creates a model of the environment [7]. The SLAM algorithm uses incoming points to estimate the location of the TurtleBot3 by comparing the value of the points to their expected values and making corrections as needed. This process is described by the probability:
+As the AuR moves, data points are collected by the LIDAR sensor and processed by a SLAM algorithm built into the ROS2, which is on board the TurtleBot3 [1]. The SLAM algorithm takes data points from the LIDAR and creates a model of the environment [7]. The SLAM algorithm uses incoming points to estimate the location of the TurtleBot3 by comparing the value of the points to their expected values and making corrections as needed. This process is described by the probability:
 
 $P(x_k, m|z0_k, u0_k, x_0)$
 
-Accuracy of SLAM is dependant on the quality of the LiDar sensor but can have error as low as "5 cm given that LiDar sensor depth accuracy already has 2-3 cm error" [8]. The type of SLAM algorithm used will also impact the accuracy of the model. This information means the constraints of being within 15 cm of the path and 1m of the destination, when used in conjunction with the UWB, can be fulfilled.
+Accuracy of SLAM is dependant on the quality of the LIDAR sensor but can have error as low as "5 cm given that LIDAR sensor depth accuracy already has 2-3 cm error" [8]. The type of SLAM algorithm used will also impact the accuracy of the model. This information means the constraints of being within 15 cm of the path and 1m of the destination, when used in conjunction with the UWB, can be fulfilled.
 
 ### Power:
 ![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/localization%20current%20graph.png)
@@ -99,7 +99,7 @@ The figure above shows the current draw for each component of the localization s
 [3] M.  Simek,  “Two  Way  Ranging  (TWR),”  Sewio  RTLS.  https://www.sewio.net/uwb-technology/two-way-ranging/
 [4]T. Polonelli, S. Schläpfer, and M. Magno, “Performance Comparison between Decawave DW1000 and DW3000 in low-power double side ranging applications,” IEEE Xplore, Aug. 01, 2022. https://ieeexplore.ieee.org/document/9881375 (accessed Nov. 28, 2022).
 [8] Z. Li, X. Li, G. Mou, D. Jiang, X. Bao, and Y. Wang, “Design of  localization System Based on Ultra-Wideband and Long Range Wire-less,” 2019 IEEE 11th International Conference on Advanced Infocomm Technology (ICAIT), Oct. 2019, doi: 0.1109/icait.2019.8935892.
-[6] “What  is  LiDar,  and  How  Does  it  Work?,”  J.D.  Power.  https://www.jdpower.com/cars/shopping-guides/what-is-LiDar-and-how-does-it-work (accessed Nov. 09, 2022).  
+[6] “What  is  LiDAR,  and  How  Does  it  Work?,”  J.D.  Power.  https://www.jdpower.com/cars/shopping-guides/what-is-LiDAR-and-how-does-it-work (accessed Nov. 09, 2022).  
 [7] “The  definitive  guide  to  SLAM  &  mobile  mapping  technologies,” www.navvis.com.  https://www.navvis.com/technology/slam  (accessed Nov. 09, 2022).  
 [8] Team  Ouster,  “Guide  to  evaluating  SLAM,”  ouster.com.  https://ouster.com/blog/guide-to-evaluating-slam/  (accessed  Nov.  9,  2022).  
 
