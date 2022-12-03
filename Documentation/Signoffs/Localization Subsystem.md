@@ -24,6 +24,10 @@ The image shows the connections between the components of the localization subsy
 
 This is the schematic of the wireless beacon that will be used to help locate the autonomous robot.
 
+![Alt text](https://cdn.discordapp.com/attachments/698697460444299284/1048409944107532360/ESP32_UWB_DW3000.png)
+
+Dimensions are approximate. We were unable to find precise dimensions directly from the manufacturer, so we estimated them from the manufacturer-provided PCB schematic.
+
 ![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/localization/localization%20beacon%20box%20lid.png)
 
 ![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/localization/localization%20beacon%20box.png)
