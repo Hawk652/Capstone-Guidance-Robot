@@ -1,5 +1,5 @@
 # Localization Subsystem
-![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/localization/unnamed_1.png)
+![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/localization/localization_block_diagram.png)
 ## Function of the Subsystem
 The localization subsystem (Fig. 1) will be tasked with gathering and processing positional data points from sensors. The sensors shall all be mounted onboard the Turtlebot 3. The sensors that will gather data for this subsystem will be the LIDAR and the ESP32UWB DW3000. The LIDAR will gather data points from all reflective surfaces around it for the SLAM algorithm to determine the AuR's current location. The UWB (Ultra Wideband) module will determine the distance between itself and 2 other UWB modules using triangulation. The other 2 UWB modules will serve as a destination marker. Using all the prior mentioned data, the AuR will be able to determine its current location. The AuR will use the updated current position data along with the route data generated from the navigation subsystem to determine the deviation of the route. 
 
