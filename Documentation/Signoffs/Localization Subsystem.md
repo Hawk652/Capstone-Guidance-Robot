@@ -99,11 +99,18 @@ The figure above shows the current draw for each component of the localization s
 
 ## References
 [1] Y.  Name,  “ROBOTIS  e-Manual,”  ROBOTIS  e-Manual.  https://emanual.robotis.com/docs/en/platform/turtlebot3/slam/  (accessed  Nov. 09, 2022).  
+
 [2] M. E. Rusli, M. Ali, N. Jamil, and M. M. Din, “An Improved Indoor  positioning Algorithm Based on RSSI-Trilateration Technique for Internet of Things (IOT),” 2016 International Conference on Computer and Communication Engineering (ICCCE), Jul. 2016, doi: 10.1109/iccce.2016.28.  
+
 [3] M.  Simek,  “Two  Way  Ranging  (TWR),”  Sewio  RTLS.  https://www.sewio.net/uwb-technology/two-way-ranging/
+
 [4]T. Polonelli, S. Schläpfer, and M. Magno, “Performance Comparison between Decawave DW1000 and DW3000 in low-power double side ranging applications,” IEEE Xplore, Aug. 01, 2022. https://ieeexplore.ieee.org/document/9881375 (accessed Nov. 28, 2022).
+
 [5] Z. Li, X. Li, G. Mou, D. Jiang, X. Bao, and Y. Wang, “Design of  localization System Based on Ultra-Wideband and Long Range Wire-less,” 2019 IEEE 11th International Conference on Advanced Infocomm Technology (ICAIT), Oct. 2019, doi: 0.1109/icait.2019.8935892.
+
 [6] “What  is  LiDAR,  and  How  Does  it  Work?,”  J.D.  Power.  https://www.jdpower.com/cars/shopping-guides/what-is-LiDAR-and-how-does-it-work (accessed Nov. 09, 2022).  
+
 [7] “The  definitive  guide  to  SLAM  &  mobile  mapping  technologies,” www.navvis.com.  https://www.navvis.com/technology/slam  (accessed Nov. 09, 2022).  
+
 [8] Team  Ouster,  “Guide  to  evaluating  SLAM,”  ouster.com.  https://ouster.com/blog/guide-to-evaluating-slam/  (accessed  Nov.  9,  2022).  
 
