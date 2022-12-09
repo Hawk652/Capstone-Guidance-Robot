@@ -15,7 +15,8 @@ The main control subsystem's function is to receive inputs from the AuR's other 
 ![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/main_control/Main%20Control%20Circuit%20Schematic.png)
 
 ## Analysis
-##Flow Chart
+
+###Flow Chart
 ![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/main_control/Main%20control%20flowchart.png)
 
 ### Navigation
