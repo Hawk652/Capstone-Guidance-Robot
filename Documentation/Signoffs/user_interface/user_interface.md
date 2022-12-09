@@ -10,6 +10,7 @@ The user interface subsystem takes in voice input from the user and outputs audi
 
 ## Buildable Schematic
 ![schematic](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/03a6a551ad9f161dd7dff29d745d47c6f72b98c4/Documentation/Images/user_interface_schematic.png)
+
 The only wired connection to the user interface subsystem is the power connection. All data is transferred wirelessly.
 
 ## Mounting
