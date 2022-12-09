@@ -10,6 +10,11 @@ The user interface subsystem takes in voice input from the user and outputs audi
 
 ## Buildable Schematic
 ![schematic](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/03a6a551ad9f161dd7dff29d745d47c6f72b98c4/Documentation/Images/user_interface_schematic.png)
+The only wired connection to the user interface subsystem is the power connection. All data is transferred wirelessly.
+
+## Mounting
+![mount](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/03a6a551ad9f161dd7dff29d745d47c6f72b98c4/Documentation/Images/NestMiniMount.png)
+The Google Nest Mini will be mounted to the AuR using the structure shown in the image above. The overall structure will be mounted using screws.
 
 ## Analysis
 
@@ -21,9 +26,6 @@ The user interface subsystem will send users' voice commands to the main control
 ![simulation](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/03a6a551ad9f161dd7dff29d745d47c6f72b98c4/Documentation/Images/user_interface_simulation.png)
 The Google Nest Mini requires 1.8 A at a voltage of 5 V [2]. This will be supplied by the power subsystem.
 
-### Mounting
-![mount](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/03a6a551ad9f161dd7dff29d745d47c6f72b98c4/Documentation/Images/NestMiniMount.png)
-The Google Nest Mini will be mounted to the AuR using the structure shown in the image above.
 
 ## BOM
 | Item | Quantity | Price Per Item | Total Price |
