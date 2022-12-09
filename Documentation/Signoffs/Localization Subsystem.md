@@ -20,9 +20,9 @@ The values for required voltage and resistive load used in Fig. 2. were derived 
 The image shows the connections between the components of the localization subsystem.
 
 ### Beacon
-![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/localization/esp32wireless.jpg)
+![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/localization/localization%20beacon%20schematic.png)
 
-This is the schematic of the wireless beacon that will be used to help locate the autonomous robot.
+The schematic only consists of power connections since all the data will be transmitted wirelessly to the main ESP32UWB DW3000 on the AuR. The beacon will have a onboard program that will continuosly verify the location of the AuR in near real time.
 
 ![Alt text](https://cdn.discordapp.com/attachments/698697460444299284/1048409944107532360/ESP32_UWB_DW3000.png)
 
