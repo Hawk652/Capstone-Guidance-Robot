@@ -14,6 +14,7 @@ The only wired connection to the user interface subsystem is the power connectio
 
 ## Mounting
 ![mount](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/03a6a551ad9f161dd7dff29d745d47c6f72b98c4/Documentation/Images/NestMiniMount.png)
+
 The Google Nest Mini will be mounted to the AuR using the structure shown in the image above. The overall structure will be mounted using screws.
 
 ## Analysis
