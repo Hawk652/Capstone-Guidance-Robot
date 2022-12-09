@@ -178,7 +178,7 @@ The figure above shows the current draw for each component of the localization s
 
 [6]DecaWave, “DW3000 Datasheet,” https://www.qorvo.com/. https://www.qorvo.com/products/d/da008142 (accessed Dec. 02, 2022).
 
-[7]M. Farooq-I-Azam, Q. Ni, and M. Dong, “An Analytical Model of Trilateration Localization Error,” doi: 10.21227/9bk9-y425.
+[7]M. Farooq-I-Azam, Q. Ni, and M. Dong, “An Analytical Model of Trilateration Localization Error.” https://eprints.lancs.ac.uk/id/eprint/142930/1/PID1236902.pdf (accessed Dec. 09, 2022)..
 
 [8] “What  is  LiDAR,  and  How  Does  it  Work?,”  J.D.  Power.  https://www.jdpower.com/cars/shopping-guides/what-is-LiDAR-and-how-does-it-work (accessed Nov. 09, 2022).  
 
