@@ -15,6 +15,7 @@ The user interface subsystem takes in voice input from the user and outputs audi
 
 ### Interface
 The primary component of the user interface subsystem will be a commercially-available voice assistant. A voice assistant was chosen as the primary interface due to ease of user access. A touchscreen, the primary alternative to a voice assistant, would require the user to maneuver around a potentially moving robot in order to interface with it. This scenario would potentially be hazardous to a user, so the team has decided to implement a voice assistant instead. The voice assistant the team has chosen to use is a Google Nest Mini. This device was chosen due to its low price point, relatively low power draw, and local processing capabilities. The local processing capabilities allow the voice assistant to directly communicate with the AuR instead of using an external server as an intermediary [1].
+The user interface subsystem will send users' voice commands to the main control system for realization.
 
 ### Power
 ![simulation](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/03a6a551ad9f161dd7dff29d745d47c6f72b98c4/Documentation/Images/user_interface_simulation.png)
