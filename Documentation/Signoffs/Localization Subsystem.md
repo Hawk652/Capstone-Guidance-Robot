@@ -66,6 +66,75 @@ $ToF=\frac{(RR-SP)-(SR-RP) +(RF-SR)-(SF-RR)}{4}$
 These equations work by calculating the time between messages and using the speed of light to determine the distance between beacons. The coordinates are calculated by the ESP32 and sent from the ESP32 to the Raspberry PI via a wired connection using I2C protocol.
 
 Based on the tests performed and documented by the articles "Performance Comparison between Decawave DW1000 and DW3000 in low-power double side ranging applications"[4] and “Design of  localization System Based on Ultra-Wideband and Long Range Wire-less,”[5] we can meet the constraint of having less than 15 cm of horizontal error. The DW3000 can be configured to operate on a range of channels which refer to the device's operating frequency and bandwidth. An error of 15 cm was achieved with the DW3000's channel 9 configuration. Channel 9 was chosen for its higher frequency which encounters less environmental interference and can therefore provide more acurate measurements when compared to other channels. Channel 9 has a frequency of 7987.2 MHz and a bandwidth of 499.2 MHz[6].
+
+From the system of equations which define trilateration the following can be derived[7]:
+
+$\Delta = x_1(y_2-y_3)+x_2(y_3-y_1)+x_3(y_1-y_2)$
+
+$Ex = {1\over2\Delta}(y_3 - y_2)(2r_1e_1 + e_1^2 - 2r_3e_3 - e_3^2) - {1\over2\Delta}(y_3 - y_1)(2r_2e_2 + e_2^2-2r_3e_3 - e_3^2)$
+
+$Ey = -{1\over2\Delta}(x_3 - x_2)(2r_1e_1 + e_1^2 - 2r_3e_3 - e_3^2) + {1\over2\Delta}(x_3 - x_1)(2r_2e_2 + e_2^2-2r_3e_3 - e_3^2)$
+
+where $E_x$ and $E_y$ are the horizontal and vertical error of the hallway, $e_i$ is the distance error of the respective beacon, $r_i$ is the distance of the Aur from the respective beacon, and $x_i$ and $y_i$ are the horizontal and vertical coordinates assigned to the respective beacons. Since all distance errors are equal the equations can be simplified to:
+
+$Ex = {1\over2\Delta}(y_3 - y_2)*2e(r_1 - r_3) - {1\over2\Delta}(y_3 - y_1)*2e(r_2 - r_3)$
+
+$Ey = -{1\over2\Delta}(x_3 - x_2)*2e(r_1 - r_3) + {1\over2\Delta}(x_3 - x_1)*2e(r_2 - r_3)$
+
+where $e$ is the $\pm10cm$ distance error provided in the data sheet[6]. Using the equations for $E_x$ and $E_y$ it is possible to find the totally error by using the equation:
+
+$Total \ Error=\sqrt{E_x^2+E_y^2}$
+
+After measuring a width of $238cm$ for the test area in Brown hall the following scenario was setup in Matlab: one beacon placed on one wall designated with coordinates of (0,0) and two beacons on the opposite wall with coordinates of (-243,-238) and (243,-238), approximately 16 feet apart. 100000 random coordinates were generated within the x range of [-243,243] and within the y range of [0,-238]. After using the generated coordinates to calculate the theoretical $r_i$ values, the equations mentioned were applied to these coordinates and the max error of the simulation was found as $~14.3cm$ which satisfies the constraint of localization within a precision of $15cm$
+
+The Matlab code used:
+
+```Matlab
+%{
+Author: Team 7
+Function: runs a simulation to find the max error for trilateration using a
+specific configuration of UWB beacons.
+%}
+
+%Set length of simulation
+simlength = 100000;
+
+%Define beacon locations
+B_1 = [0 0];
+B_2 = [-243 -238];
+B_3 = [243 -238];
+
+%Define distance error of beacons(cm)
+Derror = 10;
+
+%Find delta
+delta = B_1(1)*(B_2(2)-B_3(2))+B_2(1)*(B_3(2)-B_1(2))+B_3(1)*(B_1(2)-B_2(2));
+
+%Create test vectors
+dp = [0 0];
+r1 = zeros(1,simlength)
+r2 = zeros(1,simlength)
+r3 = zeros(1,simlength)
+
+%Run simulation
+for i = 1:simlength
+dp(1) = randi([0 2*243],1)-243;
+dp(2) = -randi([0 238],1);
+r1(i) = sqrt((dp(1)-B_1(1))^2+(dp(2)-B_1(2))^2);
+r2(i) = sqrt((dp(1)-B_2(1))^2+(dp(2)-B_2(2))^2);
+r3(i) = sqrt((dp(1)-B_3(1))^2+(dp(2)-B_3(2))^2);
+end
+
+%Calculate x/y errors
+Ex = (1/(2*delta)).*((B_3(2)-B_2(2)).*(2*Derror.*(r1-r3))-(B_3(2)-B_1(2)).*(2*Derror.*(r2-r3)));
+Ey = (1/(2*delta)).*(-(B_3(1)-B_2(1)).*(2*Derror.*(r1-r3))+(B_3(1)-B_1(1)).*(2*Derror.*(r2-r3)));
+
+%Calculate location error
+Terror = sqrt(Ex.^2+Ey.^2)
+
+%Find max error
+Merror = max(Terror)
+```
 ### Turtlebot:
 
 #### LIDAR:
@@ -109,9 +178,11 @@ The figure above shows the current draw for each component of the localization s
 
 [6]DecaWave, “DW3000 Datasheet,” https://www.qorvo.com/. https://www.qorvo.com/products/d/da008142 (accessed Dec. 02, 2022).
 
-[7] “What  is  LiDAR,  and  How  Does  it  Work?,”  J.D.  Power.  https://www.jdpower.com/cars/shopping-guides/what-is-LiDAR-and-how-does-it-work (accessed Nov. 09, 2022).  
+[7]M. Farooq-I-Azam, Q. Ni, and M. Dong, “An Analytical Model of Trilateration Localization Error,” doi: 10.21227/9bk9-y425.
 
-[8] “The  definitive  guide  to  SLAM  &  mobile  mapping  technologies,” www.navvis.com.  https://www.navvis.com/technology/slam  (accessed Nov. 09, 2022).  
+[8] “What  is  LiDAR,  and  How  Does  it  Work?,”  J.D.  Power.  https://www.jdpower.com/cars/shopping-guides/what-is-LiDAR-and-how-does-it-work (accessed Nov. 09, 2022).  
 
-[9] Team  Ouster,  “Guide  to  evaluating  SLAM,”  ouster.com.  https://ouster.com/blog/guide-to-evaluating-slam/  (accessed  Nov.  9,  2022).  
+[9] “The  definitive  guide  to  SLAM  &  mobile  mapping  technologies,” www.navvis.com.  https://www.navvis.com/technology/slam  (accessed Nov. 09, 2022).  
+
+[10] Team  Ouster,  “Guide  to  evaluating  SLAM,”  ouster.com.  https://ouster.com/blog/guide-to-evaluating-slam/  (accessed  Nov.  9,  2022).  
 
