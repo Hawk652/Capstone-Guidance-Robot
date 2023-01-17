@@ -43,6 +43,7 @@ Dr. Andy Pardue is the customer and individual who came up with the idea for thi
 
 A special thank you to:
 Tristain Hill for providing us with the Turtlebot
+
 Dr. Stephen Canefield for assisting us with the software implementation of the robot.
 
 ## Repo Organization
