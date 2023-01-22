@@ -30,6 +30,8 @@
 |R4,R5,R6,R7,R8,R9 |2|kΩ|
 |Feedback R10,R11,R12 |20|kΩ|
 
+#Ultrasonic Sensor
+ The HC-SR04 will be implented as the ultrasonic sensor for this subsystem. 
 #   Analysis
 
 The safety Subsystem (SubsystemBlockDiagram) is a schematic of how the safety subsystem will connect with one another and to the Main control subsystem. The main switch will be connecting directly to the Battery (12V) this will turn off everything in an event of an emergency. The DDS module runs off of the same voltage and will go through a DC/DC converter to reduce the voltage to be 5V.  Once the voltage as been converted to 5V the power of  the rest the Safety subsystem. The LIDAR, HC - SR04 Ultrasonic sensor, Proximity Sensor, and the Raspberry Pi will be all be connected  in parallel with one another. The LIDAR is further discussed in detail within the Localization subsystem. The HC - SR04 ultrasonic sensor is used to ensure that the robot will detect an object within a range of 2cm - 400cm. The output of the subsystem will be sent to the Raspberry Pi. The proximity sensor will be using three electric magnetic resonators to detect changes in the electric field. By using the electric field sensor it can detect objects in close proximity, therefore creating a collision avoidance sensor.  
