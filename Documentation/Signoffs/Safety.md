@@ -1,7 +1,7 @@
 
 # Safety Subsystem
 
-
+![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/safety/ImageSafety.jpg)
 
 #  Function of the Subsystem
 
@@ -14,13 +14,17 @@
 |1|  Shall have manual override (power will be cut from the motor)           |Supervisor:          Dr. Van Neste        |
 |2          |Shall maintain a distance of 0.5 m from obstacles and people           |Broader Implication         |
 
-#  Buildable schematic
+#  Buildable Schematics
+##  Subsytsem Schematic
 
+![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/safety/SafetySubsystemschematic.png)
 
-![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/SubsystemBlockDiagram.png)
+This schematic illustrates all the componts that will be interacting with one another in this system. The schematic shows how each of these will be connected.Each of these sections will be covered throughout this document. 
 
-![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/SafetySubsystem.png)
-
+##  Near Field Sensor (Proximity Sensor)
+![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/safety/Nearfieldsensorschematic.png)
+The Proximity Sensor will be the main safety sensor for this subsystem. This sensor will be able to detect objects in an omnidirectional detection. This item will be accomplished by the implementation of coils. By using their magnetic fields, the sensors will be able to detect very small changes in their distance. Below are the specific values that will be used for each component and are necessary for the sensor to function properly. These specific values have been researched in “Capacitive omnidirectional position sensor using a quarter wave resonator,” and discussed with Dr. Van Neste to ensure that these should be correct. 
+### Table of Components 
 |Component| Value| Unit|
 |-|-|-|
 |D1-D6   |1N4001|-|
@@ -30,7 +34,10 @@
 |R4,R5,R6,R7,R8,R9 |2|kΩ|
 |Feedback R10,R11,R12 |20|kΩ|
 
-#Ultrasonic Sensor
+### Reasoning for Proximity Sensor
+After extensive research and discussions with DR. Van Neste, this item seemed to be the best sensor to use for the Autonomous Guidance Robot. Currently, there are not any sensors on the market that would be within the price range of this project. The best option was to build an omnidirectional sensor with the help of Dr. Van Neste. This sensor will enable the robot to detect any obstacles or people that might stand in the way of the robot and be able to avoid the detections that have been obtained. 
+
+#  Ultrasonic Sensor
  The HC-SR04 will be implented as the ultrasonic sensor for this subsystem. 
 #   Analysis
 
