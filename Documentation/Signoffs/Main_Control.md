@@ -26,18 +26,16 @@ The main control will receive an input from the user interface subsystem and pro
 ### Error Processing
 The main control will receive inputs from the safety, localization, and power subsystems. It will compare these inputs to expected values and if there is a discrepancy, an error will be reported. The error or errors will then be processed and a course of action will be determined based on number of errors, error details, severity of errors, and other data provided to or processed by the main control subsystem.
 ### Power
-![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/main_control/Main%20Control%20Current%20Graph.PNG)
-
-The Raspberry Pi 3 B receives 5V and 2.5A[1] from the power subsystem.
+The Raspberry Pi3 B+ is connected to 6 devices via the four usb ports and a usb expansion port. Current output for each of the four onboard usb ports is limited to 500mA[1] meaning the maximum output for all four ports together is 2A. A 2A current draw and 5V voltage results in a 10 Watt load, which is doubled in order to provide a buffer. This means the power subsystem must provide 20 Watts to the Main Control subsystem.
 
 ## BOM
 | Item | Quantity | Price Per Item | Total Price |
 |-|-|-|-|
 | Raspberry Pi 3 B+ | 1 | $35 | Purchased |
 | Jumper wires | 1 | $7 | $7 |
-| | | Total Subsystem Cost: | $7 |
+| USB Hub | 1 | $7.99 | $7.99 |
+| | | Total Subsystem Cost: | $14.99 |
 
 # References
-[1]“Raspberry Pi 3 Model B+.” [Online]. Available: https://static.raspberrypi.org/files/product-briefs/Raspberry-Pi-Model-Bplus-Product-Brief.pdf (Accessed: Nov. 20, 2022)
-
-
+[1]“Raspberry Pi Documentation - Raspberry Pi hardware,” www.raspberrypi.com. https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#maximum-power-output (accessed Jan. 29, 2023).
+[2]“Raspberry Pi 3 Model B+.” [Online]. Available: https://static.raspberrypi.org/files/product-briefs/Raspberry-Pi-Model-Bplus-Product-Brief.pdf (Accessed: Nov. 20, 2022)
