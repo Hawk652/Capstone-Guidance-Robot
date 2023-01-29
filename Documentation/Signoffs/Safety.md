@@ -1,7 +1,7 @@
 
 # Safety Subsystem
 
-![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/safety/ImageSafety.jpg)
+![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/safety/safetyblockonly.png)
 
 #  Function of the Subsystem
 
@@ -38,8 +38,36 @@ The Proximity Sensor will be the main safety sensor for this subsystem. This sen
 After extensive research and discussions with DR. Van Neste, this item seemed to be the best sensor to use for the Autonomous Guidance Robot. Currently, there are not any sensors on the market that would be within the price range of this project. The best option was to build an omnidirectional sensor with the help of Dr. Van Neste. This sensor will enable the robot to detect any obstacles or people that might stand in the way of the robot and be able to avoid the detections that have been obtained. 
 
 #  Ultrasonic Sensor
- The HC-SR04 will be implented as the ultrasonic sensor for this subsystem. 
+![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/safety/HC-SR04-Ultrasonic-Sensor-Pinoutedited.png)
+
+The HC-SR04 will be implented as the ultrasonic sensor for this subsystem.This item will be a backup sensor for the Proximity sensor. 
+
+![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/safety/trasnmitterimageofHC_SR04.jpg)
+The reasoning for this is because the Proximity sensor will have a better range and has a radial sensing method than the ultrasonic sensor. The ultrasonic sensor determines an object's distance by sending a form of sonar waves out and determines the distance from the receiving signal that reflects off of an object that is within the range of the sensor, which is 2cm to 400cm. 
+
+|Component| Value| Unit|
+|-|-|-|
+|Operating Voltage|5V DC|-|
+|Operating Current |15|mA|
+|Operating Frequency| 40|KHz|
+|Min Range |2 |cm|
+|Max Range |400|cm|
+|Accuracy|3|mm|
+|Measuring Angle |<15|°|
+|Dimmension|45 * 20* 15|mm|
+ 
+# LIDAR
+The LIDAR component will be implemented for the robot's safety and surroundings. The LIDAR will determine where the walls, corners, and doors. The robot will have the knowledge of how the floor will be layed out. Because therobot will have the awreness of teh building and its layout, teh robot will be able to differntiate more clearly obstcales compared to structures.
+
+# Raspberry Pi
+The brain of the robot will be the Rasperry Pi. This means that all of the components in this subsystem will send all of their information back to the Raspberry Pi. 
+
+# Main Switch
+
+This feature of the robot will be the emergency shut off all power to the robot. This switch wil be located on the outside of the robot that way the rbot can be shut off manually.
+
 #   Analysis
+
 
 The safety Subsystem (SubsystemBlockDiagram) is a schematic of how the safety subsystem will connect with one another and to the Main control subsystem. The main switch will be connecting directly to the Battery (12V) this will turn off everything in an event of an emergency. The DDS module runs off of the same voltage and will go through a DC/DC converter to reduce the voltage to be 5V.  Once the voltage as been converted to 5V the power of  the rest the Safety subsystem. The LIDAR, HC - SR04 Ultrasonic sensor, Proximity Sensor, and the Raspberry Pi will be all be connected  in parallel with one another. The LIDAR is further discussed in detail within the Localization subsystem. The HC - SR04 ultrasonic sensor is used to ensure that the robot will detect an object within a range of 2cm - 400cm. The output of the subsystem will be sent to the Raspberry Pi. The proximity sensor will be using three electric magnetic resonators to detect changes in the electric field. By using the electric field sensor it can detect objects in close proximity, therefore creating a collision avoidance sensor.  
   
