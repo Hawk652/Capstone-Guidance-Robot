@@ -38,4 +38,5 @@ The Raspberry Pi3 B+ is connected to 6 devices via the four usb ports and a usb 
 
 # References
 [1]“Raspberry Pi Documentation - Raspberry Pi hardware,” www.raspberrypi.com. https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#maximum-power-output (accessed Jan. 29, 2023).
+
 [2]“Raspberry Pi 3 Model B+.” [Online]. Available: https://static.raspberrypi.org/files/product-briefs/Raspberry-Pi-Model-Bplus-Product-Brief.pdf (Accessed: Nov. 20, 2022)
