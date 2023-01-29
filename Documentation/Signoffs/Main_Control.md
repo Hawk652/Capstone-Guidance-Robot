@@ -12,7 +12,7 @@ The main control subsystem's function is to receive inputs from the AuR's other 
 | 6 | Shall not operate below 15-20% of the battery capacity | Ethics |
 
 ## Buildable Schematic
-![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/main_control/Main%20Control%20Circuit%20Schematic.png)
+![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/main_control/Main%20Conrtol%20Circuit%20Schematic.PNG)
 
 ## Analysis
 
