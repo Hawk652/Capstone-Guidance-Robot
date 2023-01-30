@@ -6,7 +6,7 @@
 #  Function of the Subsystem
 
 
- The safety Subsystem will be tasked with obstacle avoidance, a manual override, and utilizing the LIDAR’s mapping capabilities. The sensors and button will be attached to the top of  the robot, that way it can utilize “seeing” capabilities. The sensors will gather information within the range (0.5 meters) of  robot and send this information to the Arduino or Raspberry PI.  To ensure that there will be no obstacle undetected, the LIDAR and Proximity sensor, ultrasonic  will be utilized to ensure redundancy. When an obstacle is detected within the range by the proximity sensor, ultrasonic sensor and the LIDAR, the information will be transmitted to the Main Control subsystem.  The LIDAR will be using its mapping capabilities to determine if the robot is too close to walls, doors, and corners. The proximity sensor will be using a 360 obstacle avoidance technique to determine the location of the obstacle. The DDS module will take the signal from a crystal oscillator and use it as a clock to create a buffer output waveform at a specific frequency that is set by the onboard microcontroller.  The HC-SR04 Ultrasonic sensor will be using a range of  2cm - 400cm by using a non-contact form of measurement. 
+ The safety Subsystem will be tasked with obstacle avoidance, a manual override, and utilizing the LIDAR’s mapping capabilities. The sensors and button will be attached to the top of  the robot, that way it can utilize “seeing” capabilities. The sensors will gather information within the range (0.5 meters) of  robot and send this information to the Arduino or Raspberry PI.  To ensure that there will be no obstacle undetected, the LIDAR and Proximity sensor, ultrasonic  will be utilized to ensure redundancy. When an obstacle is detected within the range by the proximity sensor, ultrasonic sensor and the LIDAR, the information will be transmitted to the Main Control subsystem.  The LIDAR will be using its mapping capabilities to determine if the robot is too close to walls, doors, and corners. The proximity sensor will be using a 360 obstacle avoidance technique to determine the location of the obstacle. The DDS module will take the signal from a crystal oscillator and use it as a clock to create a buffer output waveform at a specific frequency that is set by the onboard microcontroller.  The Grove - Ultrasonic Distance Sensor will be using a range of  3cm - 350cm by using a non-contact form of measurement. 
 
 #  Constraints
 |     No. |Constraint  |  Origin  |
@@ -24,6 +24,7 @@ This schematic illustrates all the componts that will be interacting with one an
 ##  Near Field Sensor (Proximity Sensor)
 ![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/safety/Nearfieldsensorschematic.png)
 The Proximity Sensor will be the main safety sensor for this subsystem. This sensor will be able to detect objects in an omnidirectional detection. This item will be accomplished by the implementation of coils. By using their magnetic fields, the sensors will be able to detect very small changes in their distance. Below are the specific values that will be used for each component and are necessary for the sensor to function properly. These specific values have been researched in “Capacitive omnidirectional position sensor using a quarter wave resonator,” and discussed with Dr. Van Neste to ensure that these should be correct. 
+
 ### Table of Components 
 |Component| Value| Unit|
 |-|-|-|
@@ -38,45 +39,47 @@ The Proximity Sensor will be the main safety sensor for this subsystem. This sen
 After extensive research and discussions with DR. Van Neste, this item seemed to be the best sensor to use for the Autonomous Guidance Robot. Currently, there are not any sensors on the market that would be within the price range of this project. The best option was to build an omnidirectional sensor with the help of Dr. Van Neste. This sensor will enable the robot to detect any obstacles or people that might stand in the way of the robot and be able to avoid the detections that have been obtained. 
 
 #  Ultrasonic Sensor
-![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/safety/HC-SR04-Ultrasonic-Sensor-Pinoutedited.png)
+![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/safety/Grove-Ultrasonic-Distance-Sensor-pinoutFinal.jpg)
 
-The HC-SR04 will be implented as the ultrasonic sensor for this subsystem.This item will be a backup sensor for the Proximity sensor. 
+The Grove - Ultrasonic Distance Sensor will be implented as the ultrasonic sensor for this subsystem.This item will be a backup sensor for the Proximity sensor. 
 
 ![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/safety/trasnmitterimageofHC_SR04.jpg)
-The reasoning for this is because the Proximity sensor will have a better range and has a radial sensing method than the ultrasonic sensor. The ultrasonic sensor determines an object's distance by sending a form of sonar waves out and determines the distance from the receiving signal that reflects off of an object that is within the range of the sensor, which is 2cm to 400cm. 
+
+The reasoning for this is because the Proximity sensor will have a better range and has a radial sensing method than the ultrasonic sensor. The ultrasonic sensor determines an object's distance by sending a form of sonar waves out and determines the distance from the receiving signal that reflects off of an object that is within the range of the sensor, which is 3cm to 350cm. 
 
 |Component| Value| Unit|
 |-|-|-|
-|Operating Voltage|5V DC|-|
-|Operating Current |15|mA|
+|Operating Voltage|DC 3.2~5.2V|-|
+|Operating Current |8|mA|
 |Operating Frequency| 40|KHz|
-|Min Range |2 |cm|
-|Max Range |400|cm|
-|Accuracy|3|mm|
+|Min Range |3 |cm|
+|Max Range |350|cm|
+|Accuracy|2|mm|
 |Measuring Angle |<15|°|
-|Dimmension|45 * 20* 15|mm|
+|Dimmension|50 x25 x16|mm|
  
 # LIDAR
-The LIDAR component will be implemented for the robot's safety and surroundings. The LIDAR will determine where the walls, corners, and doors. The robot will have the knowledge of how the floor will be layed out. Because therobot will have the awreness of teh building and its layout, teh robot will be able to differntiate more clearly obstcales compared to structures.
+The LIDAR component will be implemented for the robot's safety and surroundings. The LIDAR will determine where the walls, corners, and doors. The robot will have the knowledge of how the floor will be layed out. Because therobot will have the awreness of teh building and its layout, teh robot will be able to differntiate more clearly obstcales compared to structures. The details on how this device works and how it will be implemented in the rest of the system will be in the Localization Subsystem.
 
 # Raspberry Pi
-The brain of the robot will be the Rasperry Pi. This means that all of the components in this subsystem will send all of their information back to the Raspberry Pi. 
+The brain of the robot will be the Rasperry Pi. This means that all of the components in this subsystem will send all of their information back to the Raspberry Pi. The details on how this device works and how it will be implemented in the rest of the system will be in the Main Control Subsystem.
 
 # Main Switch
 
-This feature of the robot will be the emergency shut off all power to the robot. This switch wil be located on the outside of the robot that way the rbot can be shut off manually.
+This feature of the robot will be the emergency shut off all power to the robot. This switch wil be located on the outside of the robot that way the rbot can be shut off manually. The switch will be discussed further in the Power Subsystem.
 
 #   Analysis
 
 
-The safety Subsystem (SubsystemBlockDiagram) is a schematic of how the safety subsystem will connect with one another and to the Main control subsystem. The main switch will be connecting directly to the Battery (12V) this will turn off everything in an event of an emergency. The DDS module runs off of the same voltage and will go through a DC/DC converter to reduce the voltage to be 5V.  Once the voltage as been converted to 5V the power of  the rest the Safety subsystem. The LIDAR, HC - SR04 Ultrasonic sensor, Proximity Sensor, and the Raspberry Pi will be all be connected  in parallel with one another. The LIDAR is further discussed in detail within the Localization subsystem. The HC - SR04 ultrasonic sensor is used to ensure that the robot will detect an object within a range of 2cm - 400cm. The output of the subsystem will be sent to the Raspberry Pi. The proximity sensor will be using three electric magnetic resonators to detect changes in the electric field. By using the electric field sensor it can detect objects in close proximity, therefore creating a collision avoidance sensor.  
+The safety Subsystem (SubsystemBlockDiagram) is a schematic of how the safety subsystem will connect with one another and to the Main control subsystem. The main switch will be connecting directly to the Battery (12V) this will turn off everything in an event of an emergency. The DDS module runs off of the same voltage and will go through a DC/DC converter to reduce the voltage to be 5V.  Once the voltage as been converted to 5V the power of  the rest the Safety subsystem. The LIDAR,
+Grove - Ultrasonic Distance Sensor, Proximity Sensor, and the Raspberry Pi will be all be connected  in parallel with one another. The LIDAR is further discussed in detail within the Localization subsystem. The Grove - Ultrasonic Distance Sensor is used to ensure that the robot will detect an object within a range of 3cm - 350cm. The output of the subsystem will be sent to the Raspberry Pi. The proximity sensor will be using three electric magnetic resonators to detect changes in the electric field. By using the electric field sensor it can detect objects in close proximity, therefore creating a collision avoidance sensor.  
   
 
 #    BOM
 |Item| Quantity| Price Per Item| Total Price
 |-|-|-|-|
 |DDS Module   |3|$50|$150 |        |
-|HC­SR04 Ultrasonic Sensor  |1|$14.99| $14.99     |
+|Grove - Ultrasonic Distance Sensor  |4|$3.95| $14.99    |
 |LDS-01(LIDAR)| 1 |$200|Already Purchased
 |Copper Wire |1|$17| $ 17   |
 |Raspberry Pi |1|$35 |Already Purchased  |
