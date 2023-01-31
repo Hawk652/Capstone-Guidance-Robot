@@ -2,16 +2,13 @@
 ![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/SamuelMandody-signoff-Locomotion/Documentation/Images/Locomotion.png)
 
 ## Function of the Subsystem
-The locomotion subsystem will be tasked with propelling the AuR via the motor and providing local displacement and instantaneous velocity via the attached motor encoder. 
-
+The locomotion subsystem is responsible for not only moving the AuR, but also maintaining the velocity set by the group in the constraints by using a closed loop system. This can be verified by the telemetric data provided by the encoders on the motors. 
 
 ## Buildable Schematic
-![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/SamuelMandody-signoff-Locomotion/Documentation/Images/Locomotion_schematic.png)
-
-The values for required voltage and resistive load used in the buildable schematic were derived from the specification documents for both the openCR1.0 and the DYNAMIXEL XM430-W210-R.
+will be added once I get the okay on the Analysis portion.
 
 ## Analysis
-The motors each have a standby current of 40 mA and the model still needs to be simulated under load to determine the average current draw when in use. The motors are hooked up to the 12 V rail of the OpenCR1.0 board. The locomotion subsystem sends instantaneous velocity which is constantly being measured by the onboard motor encoders to the main control subsystem via UART connection. Once the data is processed by the main control subsystem and translated into location, appropriately timed electrical pulses are sent to the motors to move the AuR towards its destination.
+Based on the documentation provided by the Turtlebot3 manual, it is clear that the currently equipped motors do not provide the necessary torque to reach nor maintain anywhere near the required velocity. The starting point is to determine the amount of pushing force required to move the turtlebot using Newton's First Law. The mass of the turtlebot is 1.8kg, and the acceleration can vary. It would not make sense to set the acceleration too high due to increased power consumption by the motors on top of the fact that once the turtlebot reaches 1.1 m/s, it will be maintaining that velocity without exceeding it (within reason). Overhead needs to be considered in the case of a load increase to the turtlebot as well as potential gradient changes depending on the area of future application. The current itteration of the AuR will be tested in Brown Hall on the second floor which is considerably flat. After calculating force, we can use the following equation to obtain the exact torque required by both motors combined (torque = (force * wheel radius)/2). Once torque is calculated, the power consumed can be calculated based on the average operating speed of the motor at the required torque. Now that Power has been calculated, the current draw can be determined using (P = IV) plugging in 12V for the voltage seeing as the current 12V motor will be replaceed with another 12V motor.
 
 ## BOM
 | Item | Quantity | Price Per Item | Total Price | 
