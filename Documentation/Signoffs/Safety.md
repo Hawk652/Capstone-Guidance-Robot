@@ -22,19 +22,26 @@
 This schematic illustrates all the componts that will be interacting with one another in this system. The schematic shows how each of these will be connected.Each of these sections will be covered throughout this document. 
 
 ##  Near Field Sensor (Proximity Sensor)
-![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/safety/Nearfieldsensorschematic.png)
+![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/safety/2coilsschematicimage.jpg)
 The Proximity Sensor will be the main safety sensor for this subsystem. This sensor will be able to detect objects in an omnidirectional detection. This item will be accomplished by the implementation of coils. By using their magnetic fields, the sensors will be able to detect very small changes in their distance. Below are the specific values that will be used for each component and are necessary for the sensor to function properly. These specific values have been researched in “Capacitive omnidirectional position sensor using a quarter wave resonator,” and discussed with Dr. Van Neste to ensure that these should be correct. 
 
 ### Table of Components 
 |Component| Value| Unit|
 |-|-|-|
-|D1-D6   |1N4001|-|
-|C1,C2,C3  |4.7|μF|
-|R1,R2,R3| 1|kΩ|
-|L1,L2,L3,L4,L5,L6, Choke L7,Choke L8 |300|μH|
-|R4,R5,R6,R7,R8,R9 |2|kΩ|
-|Feedback R10,R11,R12 |20|kΩ|
+|D1-D4   |1N4001|-|
+|C1,C2  |4.7|μF|
+|R1,R2| 1|kΩ|
+|L1,L2,L3 |300|μH|
+|R4,R5 |2|kΩ|
+|R6,R7 |20|kΩ|
 
+## Image of PCB 
+![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/safety/2coilschematic.png)
+
+front side
+![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/safety/2coilschematicback.png)
+
+back side
 ### Reasoning for Proximity Sensor
 After extensive research and discussions with DR. Van Neste, this item seemed to be the best sensor to use for the Autonomous Guidance Robot. Currently, there are not any sensors on the market that would be within the price range of this project. The best option was to build an omnidirectional sensor with the help of Dr. Van Neste. This sensor will enable the robot to detect any obstacles or people that might stand in the way of the robot and be able to avoid the detections that have been obtained. 
 
@@ -46,6 +53,9 @@ The Grove - Ultrasonic Distance Sensor will be implented as the ultrasonic senso
 ![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/safety/trasnmitterimageofHC_SR04.jpg)
 
 The reasoning for this is because the Proximity sensor will have a better range and has a radial sensing method than the ultrasonic sensor. The ultrasonic sensor determines an object's distance by sending a form of sonar waves out and determines the distance from the receiving signal that reflects off of an object that is within the range of the sensor, which is 3cm to 350cm. 
+
+## Pinout of Ultrasonic Sensor
+![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/safety/Grover_Ranger_pinout.png)
 
 |Component| Value| Unit|
 |-|-|-|
@@ -78,12 +88,12 @@ Grove - Ultrasonic Distance Sensor, Proximity Sensor, and the Raspberry Pi will 
 #    BOM
 |Item| Quantity| Price Per Item| Total Price
 |-|-|-|-|
-|DDS Module   |3|$50|$150 |        |
-|Grove - Ultrasonic Distance Sensor  |4|$3.95| $14.99    |
+|DDS Module   |4|$50|$200 |        |
+|Grove - Ultrasonic Distance Sensor  |4|$3.95| $15.80    |
 |LDS-01(LIDAR)| 1 |$200|Already Purchased
 |Copper Wire |1|$17| $ 17   |
 |Raspberry Pi |1|$35 |Already Purchased  |
-
+|Total Price|||$232.80|
 #    Reference
 
 “Capacitive omnidirectional position sensor using a quarter wave resonator,” IEEE Xplore. [Online]. Available: https://ieeexplore.ieee.org/document/9827944. [Accessed: 21-Nov-2022]. 
