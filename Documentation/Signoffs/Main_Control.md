@@ -17,7 +17,7 @@ The main control subsystem's function is to receive inputs from the AuR's other 
 ## Analysis
 
 ### Flow Chart
-![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/main_control/Main%20control%20flowchart%20new.png)
+![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/main_control/Main%20control%20flowchart%20(1).png)
 
 ### Navigation
 The main control will receive location data and route deviation data from the localization subsystem as well as locomotion data from the rotary encoder. This data will be used to build and update a map model of the building. The user input will be processed in conjunction with the localization data to construct a path from the AuR's location to its desired destination. This will take place using tools provided by the ROS2 OS.
