@@ -17,13 +17,16 @@
 #  Buildable Schematics
 ##  Subsytsem Schematic
 
-![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/safety/SafetySubsystemschematic.png)
+![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/safety/safety_subsytsem_final_schematic.png)
+ 
 
-This schematic illustrates all the componts that will be interacting with one another in this system. The schematic shows how each of these will be connected.Each of these sections will be covered throughout this document. 
+This schematic illustrates all the components that will be interacting with one another in this system. Each of these sections will be covered throughout this document. 
 
+## Pinout of the Subsystem
+![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/safety/Pinout_diagram.png)
 ##  Near Field Sensor (Proximity Sensor)
 ![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/safety/2coilsschematicimage.jpg)
-The Proximity Sensor will be the main safety sensor for this subsystem. This sensor will be able to detect objects in an omnidirectional detection. This item will be accomplished by the implementation of coils. By using their magnetic fields, the sensors will be able to detect very small changes in their distance. Below are the specific values that will be used for each component and are necessary for the sensor to function properly. These specific values have been researched in “Capacitive omnidirectional position sensor using a quarter wave resonator,” and discussed with Dr. Van Neste to ensure that these should be correct. 
+The Proximity Sensor will be the main safety sensor for this subsystem. This sensor will be able to detect objects in an omnidirectional field of view. This sensor will be accomplished by the implementation of coils. By using their electric fields, the sensors will be able to detect very small changes in their distance. Below are the specific values that will be used for each component and are necessary for the sensor to function properly. These specific values have been researched in “Capacitive omnidirectional position sensor using a quarter wave resonator,” and discussed with Dr. Van Neste to ensure that these should be correct. 
 
 ### Table of Components 
 |Component| Value| Unit|
@@ -43,7 +46,7 @@ front side
 
 back side
 ### Reasoning for Proximity Sensor
-After extensive research and discussions with DR. Van Neste, this item seemed to be the best sensor to use for the Autonomous Guidance Robot. Currently, there are not any sensors on the market that would be within the price range of this project. The best option was to build an omnidirectional sensor with the help of Dr. Van Neste. This sensor will enable the robot to detect any obstacles or people that might stand in the way of the robot and be able to avoid the detections that have been obtained. 
+After extensive research and discussions with Dr. Van Neste, this sensor seemed to be the best for the Autonomous Guidance Robot. Currently, there are not any sensors on the market that would be within the price range of this project. The best option was to build an omnidirectional sensor with the help of Dr. Van Neste. This sensor will enable the robot to detect any obstacles or people that might stand in the way of the robot and be able to avoid the detections that have been obtained. 
 
 #  Ultrasonic Sensor
 ![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/safety/Grove-Ultrasonic-Distance-Sensor-pinoutFinal.jpg)
@@ -69,19 +72,19 @@ The reasoning for this is because the Proximity sensor will have a better range 
 |Dimmension|50 x25 x16|mm|
  
 # LIDAR
-The LIDAR component will be implemented for the robot's safety and surroundings. The LIDAR will determine where the walls, corners, and doors. The robot will have the knowledge of how the floor will be layed out. Because therobot will have the awreness of teh building and its layout, teh robot will be able to differntiate more clearly obstcales compared to structures. The details on how this device works and how it will be implemented in the rest of the system will be in the Localization Subsystem.
+The LIDAR component will be implemented for the robot's safety and surroundings. The LIDAR will determine where the walls, corners, and doors are. The robot will be aware of the floor layout and will be able to differentiate obstacles compared to structures. The details on how this device works and how it will be implemented in the rest of the system will be in the Localization Subsystem.
 
 # Raspberry Pi
 The brain of the robot will be the Rasperry Pi. This means that all of the components in this subsystem will send all of their information back to the Raspberry Pi. The details on how this device works and how it will be implemented in the rest of the system will be in the Main Control Subsystem.
 
 # Main Switch
 
-This feature of the robot will be the emergency shut off all power to the robot. This switch wil be located on the outside of the robot that way the rbot can be shut off manually. The switch will be discussed further in the Power Subsystem.
+The main switch's functionality will be to quickly cut off power to the robot for emergency purposes. This switch wil be located on the outside of the robot that way the robot can be shut off manually. The switch will be discussed further in the Power Subsystem.
 
 #   Analysis
 
 
-The safety Subsystem (SubsystemBlockDiagram) is a schematic of how the safety subsystem will connect with one another and to the Main control subsystem. The main switch will be connecting directly to the Battery (12V) this will turn off everything in an event of an emergency. The DDS module runs off of the same voltage and will go through a DC/DC converter to reduce the voltage to be 5V.  Once the voltage as been converted to 5V the power of  the rest the Safety subsystem. The LIDAR,
+The safety Subsystem (SubsystemBlockDiagram) is a schematic of how the subsystem will connect with one another and to the Main control subsystem. The main switch will be connecting directly to the Battery (12V), this will turn off everything in an event of an emergency. The DDS module runs off of the same voltage and will go through a DC/DC converter to reduce the voltage to be 5V.  Once the voltage as been converted to 5V the power of  the rest the Safety subsystem. The LIDAR,
 Grove - Ultrasonic Distance Sensor, Proximity Sensor, and the Raspberry Pi will be all be connected  in parallel with one another. The LIDAR is further discussed in detail within the Localization subsystem. The Grove - Ultrasonic Distance Sensor is used to ensure that the robot will detect an object within a range of 3cm - 350cm. The output of the subsystem will be sent to the Raspberry Pi. The proximity sensor will be using three electric magnetic resonators to detect changes in the electric field. By using the electric field sensor it can detect objects in close proximity, therefore creating a collision avoidance sensor.  
   
 
