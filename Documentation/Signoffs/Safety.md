@@ -23,7 +23,7 @@
 This schematic illustrates all the components that will be interacting with one another in this system. Each of these sections will be covered throughout this document. 
 
 ## Pinout of the Subsystem
-![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/safety/Pinout_diagram.png)
+![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/safety/finalpinoutschematic.png)
 ##  Near Field Sensor (Proximity Sensor)
 ![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/safety/2coilsschematicimage.jpg)
 The Proximity Sensor will be the main safety sensor for this subsystem. This sensor will be able to detect objects in an omnidirectional field of view. This sensor will be accomplished by the implementation of coils. By using their electric fields, the sensors will be able to detect very small changes in their distance. Below are the specific values that will be used for each component and are necessary for the sensor to function properly. These specific values have been researched in “Capacitive omnidirectional position sensor using a quarter wave resonator,” and discussed with Dr. Van Neste to ensure that these should be correct. 
