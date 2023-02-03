@@ -1,7 +1,7 @@
 # Main Control Subsystem
 
 ## Functionality of the Subsystem
-<img src="https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/main_control/MainControlBlockDiagram.png" alt="Figure 1" width="500" style="display: block; margin-left: auto; margin-right: auto;"/>
+<img src="https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/main_control/Concept%20Block%20Diagram%20(revized).png" alt="Figure 1" width="500" style="display: block; margin-left: auto; margin-right: auto;"/>
 
 The main control subsystem's function is to receive inputs from the AuR's other subsystems and use those inputs to determine the AuR's actions. The subsystem is responsible for navigation and pathfinding as well as connecting all of the subsystems together.
 
