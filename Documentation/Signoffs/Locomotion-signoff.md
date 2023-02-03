@@ -39,10 +39,14 @@ $37.08W = 12V * 3.09A$
 Based on the calculations above alongside the specifications provided to us via the datasheet of the motors, the group is certain that the motors that were provided will fit the needs of the AuR. They will not be operating out of spec and they also allow for overhead within the system for any future upgrades that would increase the mass of the AuR. The only downside to changing the stock motors is that now motor controllers are required to drive and regulate the speed of the motors. The Dynamixel motors that came stock on the turtlebot were an all in one closed loop system. Based on the calculations above, the Pololu Jrk G2 21v3 motor controller will be a perfect fit. Not only does it support a wide 4.5V-28V operating range, it can also deliver continuous current outputs of up to 2.6A. Each motor will be drawing ~1.545A. It also offers closed loop speed control to make use of the onboard motor encoders. Last but not least, the controllers are at a very solid price point for all that they offer at $59.50 per unit.[2]
 
 ## Pinout of the Motor Controller
-will be added next push
+![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/SamuelMandody-signoff-Locomotion/Documentation/Electrical/Schematics/motor_controller_pinout.png)
+
+This is the pin layout of the Jrk G2 21v3 motor controller.
 
 ## Buildable Schematic
-will be added once I get the okay on the Analysis portion.
+![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/SamuelMandody-signoff-Locomotion/Documentation/Electrical/Schematics/Locomotion_schematic.png)
+
+This is how the locomotion subsystem will be powered and where the data that is retrieved is going. 
 
 ## BOM
 | Item | Quantity | Price Per Item | Total Price | 
@@ -54,5 +58,5 @@ will be added once I get the okay on the Analysis portion.
 | | | Total Subsystem Cost: | $139.90|
 
 ## References
-[1] http://www.gearseds.com/files/GM9236S025.pdf
-[2] https://www.pololu.com/product/3142
+[1] GM9236S025, "GM9236S025.pdf" GM9236S025.pdf. [Online]. Available: http://www.gearseds.com/files/GM9236S025.pdf. [Accessed: 01-Feb-2023]
+[2] Jrk G2 21v3 USB Motor Controller, "Jrk G2 21v3 USB Motor Controller with Feedback" Jrk G2 21v3 USB Motor Controller. [Online]. Available: https://www.pololu.com/product/3142 [Accessed: 01-Feb-2023]
