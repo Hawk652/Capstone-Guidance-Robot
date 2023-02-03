@@ -1,7 +1,7 @@
 
 # Safety Subsystem
 
-![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/safety/finalfinal_safetyblock(4).jpeg)
+![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/safety/finalfinal_finalsafetyblockonly%20(5).jpeg)
 
 #  Function of the Subsystem
 
