@@ -17,7 +17,7 @@
 #  Buildable Schematics
 ##  Subsytsem Schematic
 
-![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/safety/safety_subsytsem_final_schematic.png)
+![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/safety/finalfinalschematicblock.png)
  
 
 This schematic illustrates all the components that will be interacting with one another in this system. Each of these sections will be covered throughout this document. 
