@@ -110,4 +110,6 @@ Grove - Ultrasonic Distance Sensor, Proximity Sensor, and the Raspberry Pi will 
 
 “Data Sheet - SparkFun Electronics.” [Online]. Available: https://cdn.sparkfun.com/datasheets/Sensors/Proximity/apds9960.pdf. [Accessed: 22-Nov-2022]. 
 
-HC-SR04 datasheet. [Online]. Available: https://datasheetspdf.com/pdf-file/1380136/ETC/HC-SR04/1. [Accessed: 21-Nov-2022]. 
+“Grove - ultrasonic distance sensor,” Seeed Studio, 29-Dec-2022. [Online]. Available: https://www.seeedstudio.com/Grove-Ultrasonic-Distance-Sensor.html. [Accessed: 03-Feb-2023]. 
+
+
