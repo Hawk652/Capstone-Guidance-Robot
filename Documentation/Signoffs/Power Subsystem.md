@@ -13,8 +13,9 @@ The function of the power subsystem is to recieve power from the docking station
 | 4 | Shall not operate below 15-20% of the battery capacity | Ethics
 
 ## Buildable Schematic 
-![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/power%20circuit%20schematic.png)
-The circuit schematic is currently incomplete due to unknown loads at the time. A pcb schematic will potentially be added to in the future. Furthermore, 3d cad schematics will potentially be added to house components.
+![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/Power/power%20schematic.png)
+The system will recieve power from a pair of metal docking contacts. The battery distributes power to the rest of the system through a fuse box. The fuse box provides overcurrent protection to reduce the risk of electrical damage to the AuR's components. A manual switch is added between the fuse box and motors to provide a safety feature to the AuR. The manual switch allows a user to immediately stop the AuR from moving and causing potential physical harm. The OpenCR1 provides 5 Volts to the RaspberryPI3, LIDAR, ESP32, and speakerphone using a built in voltage divider on the OpenCR1. 
+
 
 ## Analysis
 Analysis of the subsystem is incomplete due to unknown loads added on. Analysis will be done in the future.
