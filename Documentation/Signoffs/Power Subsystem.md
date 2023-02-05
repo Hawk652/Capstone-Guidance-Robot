@@ -27,8 +27,9 @@ Analysis of the subsystem is incomplete due to unknown loads added on. Analysis 
 | USB Cable                     | 2        | $6.00                 | Already Purchased |
 | Li-Po Battery Extension Cable | 1        | $9.00                 | Already Purchased |
 | Raspberry Pi 3 Power Cable    | 1        | $8.00                 | Already Purchased |
-|                               |          | Total Subsystem Cost: | Already Purchased |
-
-The BOM is currently based on the components the team has access to at the moment. The list will be further expanded once further details are known for the power subsystem.
-
+| Buck Converter                | 1        | $10.00                | $10.00            |
+| Manual Swith                  | 1        | $6.00                 | $6.00             |
+| 6 Way Fuse Block              | 1        | $12.00                | $12.00            |
+| Metal Contacts                | 1        | $16.95                | $16.95            |
+|                               |          | Total Subsystem Cost: | $44.95            |
 
