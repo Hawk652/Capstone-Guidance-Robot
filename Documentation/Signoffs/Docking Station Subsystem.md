@@ -36,9 +36,9 @@ The current dimensions are based on the turtlebot's current height and width. Th
 ## BOM
 | Item                          | Quantity | Price Per Item        | Total Price       |
 | ----------------------------- | -------- | --------------------- | ----------------- |
-| 12V Wall Adapter                 | 1        | TBA                | TBA |
-| Metal Contacts                     | 2        | TBA                 | TBA |
-|                               |          | Total Subsystem Cost: | TBA |
+| 12V Wall Adapter              | 1        | 10.00                 | 10.00             |
+| Metal Contacts                | 1        | 16.95                 | 16.95             |
+|                               |          | Total Subsystem Cost: | 26.95             |
 
 
 
