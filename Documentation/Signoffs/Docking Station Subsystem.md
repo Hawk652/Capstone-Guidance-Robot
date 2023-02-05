@@ -13,6 +13,7 @@ The function of the docking station subsystem is provide a area for the AuR to a
 
 ## Buildable Schematic 
 ![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/docking%20station/docking%20station%20schematic.png)
+
 The docking station subsystem will recieve power from a 120 VAC from a receptacle. The 120 VAC will be converted into 12 VDC through the use of a wall adapter. The 12 VDC will then be sent to the metal contacts for the AuR to recieve power. A manual switch is added in between the wall adapter and metal contacts to reduce electrical safety risks to users within the area.
 
 #### 3D Model of Charging Station
