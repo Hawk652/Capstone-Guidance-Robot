@@ -18,7 +18,7 @@ The system will recieve power from a pair of metal docking contacts. The battery
 
 
 ## Analysis
-Since the components most vulnerable to ripple voltage are being fed 5V through an integratted filter, there should be no significant ripple voltage to harm the sensors, microcomputer, and other components of the AuR.
+Since the components most vulnerable to ripple voltage are being fed 5V through an integrated filter, there should be no significant ripple voltage to harm the sensors, microcomputer, and other components of the AuR. For sizing the battery, the current draw for the near field sensors are currently unknown. Due to the unkown operating current, the anaylysis for the battery shall be conducted in the near future.
 
 ## BOM
 | Item                          | Quantity | Price Per Item        | Total Price       |
