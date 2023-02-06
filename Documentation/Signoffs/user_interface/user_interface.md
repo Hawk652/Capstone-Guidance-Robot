@@ -11,12 +11,13 @@ The user interface subsystem takes in voice input from the user and outputs audi
 ## Buildable Schematic
 ![schematic](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/75130f5b4fa6503de81a4400c2216e49b48e5778/Documentation/Images/user_interface_schematic.png?raw=true)
 
+
 The only hardware components of the user interface are the combination microphone and speaker. These will be connected via USB to the main control subsystem's Raspberry Pi. Both power and data with be transferred over this USB connection.
 
 ## Mounting
 ![dimensions](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/JacobWilkinson-signoff-userinterface/Documentation/Images/user_interface_speaker_dimensions.png?raw=true)
-
-The microphone and speaker will be mounted to the AuR using a 3d-printed mount. The above image shows the dimensions of the device.
+![mount](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/JacobWilkinson-signoff-userinterface/Documentation/Images/speakerphone_mount.png?raw=true)
+The microphone and speaker will be mounted to the AuR using a 3d-printed mount. The above images show the dimensions of the device and the model for the mount.
 
 ## Analysis
 
