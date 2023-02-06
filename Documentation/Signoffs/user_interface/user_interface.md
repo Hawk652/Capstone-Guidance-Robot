@@ -17,6 +17,7 @@ The only hardware components of the user interface are the combination microphon
 ## Mounting
 ![dimensions](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/JacobWilkinson-signoff-userinterface/Documentation/Images/user_interface_speaker_dimensions.png?raw=true)
 ![mount](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/JacobWilkinson-signoff-userinterface/Documentation/Images/speakerphone_mount.png?raw=true)
+
 The microphone and speaker will be mounted to the AuR using a 3d-printed mount. The above images show the dimensions of the device and the model for the mount.
 
 ## Analysis
