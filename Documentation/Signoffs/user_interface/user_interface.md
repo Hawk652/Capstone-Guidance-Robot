@@ -9,7 +9,7 @@ The user interface subsystem takes in voice input from the user and outputs audi
 | 1 | Shall use voice assistant technology for user interface | Ethics |
 
 ## Buildable Schematic
-![schematic](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/75130f5b4fa6503de81a4400c2216e49b48e5778/Documentation/Images/user_interface_schematic.png?raw=true)
+![schematic](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/6ad137c4135068d1534b6e9ff95044c0882145fa/Documentation/Images/user_interface_schematic.png?raw=true)
 
 
 The only hardware components of the user interface are the combination microphone and speaker. These will be connected via USB to the main control subsystem's Raspberry Pi. Both power and data with be transferred over this USB connection.
