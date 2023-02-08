@@ -101,9 +101,9 @@ Grove - Ultrasonic Distance Sensor, Proximity Sensor, and the Raspberry Pi will 
 |DDS Module   |4|$50|$200 |        |
 |Grove - Ultrasonic Distance Sensor  |4|$3.95| $15.80    |
 |LDS-01(LIDAR)| 1 |$200|Already Purchased
-|Copper Wire |1|$54.82| $ 54.82   |
+|Copper Wire |1|$17| $ 17  |
 |Raspberry Pi |1|$35 |Already Purchased  |
-|Total Price|||$270.62|
+|Total Price|||$232.80|
 #    Reference
 
 “Capacitive omnidirectional position sensor using a quarter wave resonator,” IEEE Xplore. [Online]. Available: https://ieeexplore.ieee.org/document/9827944. [Accessed: 21-Nov-2022]. 
