@@ -44,7 +44,7 @@ Based on the calculations above alongside the specifications provided to us via 
 This is the pin layout of the Jrk G2 21v3 motor controller.
 
 ## Buildable Schematic
-![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/SamuelMandody-signoff-Locomotion/Documentation/Electrical/Schematics/Locomotion_schematic.png)
+![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/SamuelMandody-signoff-Locomotion/Documentation/Images/Locomotion_buildable.png)
 
 This is how the locomotion subsystem will be powered and where the data that is retrieved is going. 
 
