@@ -1,5 +1,5 @@
 # Locomotion Subsystem
-![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/SamuelMandody-signoff-Locomotion/Documentation/Images/Locomotion.png)
+![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/SamuelMandody-signoff-Locomotion/Documentation/Images/Locomotion_updated.png)
 
 ## Function of the Subsystem
 The locomotion subsystem is responsible for not only moving the AuR, but also maintaining the velocity set by the group in the constraints by using a closed loop system between the proposed motors, the encoders attached to those motors, and the controllers that will recieve feedback from the encoders. The feedback will go back to the Main Control subsystem to assist with the SLAM algorithm as well as re-adjust the duty cycle of the power signal being sent to the motors to maintain proper velocity.
