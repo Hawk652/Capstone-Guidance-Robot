@@ -20,7 +20,37 @@ The voltage sensor will measure the voltage of the battery and send that measure
 
 
 ## Analysis
-Since the components most vulnerable to ripple voltage are being fed 5V through an integrated filter, there should be no significant ripple voltage to harm the sensors, microcomputer, and other components of the AuR. The LiNiMnCo battery will be able to provide 18V and 10A for the entire system. The excess voltage and current provides a margin of error for the AuR incase of compnenet requiring more power than necessary. 
+### Operating Current
+Here are the operating currents for each of the devices on the AuR. 
+| Device              | Operating Current<br>(Amps) |
+| ------------------- | --------------------------- |
+| Ultrasonic Sensor 1 | 0.008                       |
+| Ultrasonic Sensor 2 | 0.008                       |
+| Ultrasonic Sensor 3 | 0.008                       |
+| Ultrasonic Sensor 4 | 0.008                       |
+| Near Field Sensor   | 0.050                       |
+| Motors              | 3.089                       |
+| OpenCR1             | 0.130                       |
+| RaspberryPI3        | 2.000                       |
+| LIDAR               | 0.400                       |
+| ESP32               | 0.032                       |
+| Speakerphone        | 1.500                       |
+| Voltage Sensor      | 0.320                       |
+
+Using the equation below to transform current over converters and knowing that parallel currents sum up with each other, the total operating current can be calculated. Additionally, the converters are not perfectly efficient and has some loss. So, a 5% error is added to account for the converters' loss. 
+
+$(Is \div Ip) = (Np \div Ns)$
+
+After summing the current and performing the necessary calculations, the total operating current of the AuR is 5.212 ± 0.261A. It is ideal for the AuR to be provided with about double the calculated operating to accomadate for future modifications and possible error. In conclusion, it is optimal for the battery to provide 10 Amps which is about double the calculated operating current.
+
+### Ripple Voltage
+![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/Power/ripple%20simulation.png)
+
+The figure above demonstrates a simulation to determine the ripple voltage outputting from the converters. The motor is represented with the motor's resistance and a switch to replicate the motor turning on and off. The 12V/5V converter are the converters being used to provide 5V to some of the AuR's components. Only one converter will be neccessary to simulate the ripple voltage.
+
+![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/Power/ripple%20plot.png)
+
+As seen from the plot, the ripple voltage coming out of the 12V/5V converter is less than 50mVpp. This then shows that the ripple voltage will not be high enough to damage the electrical components. 
 
 ## BOM
 | Item                          | Quantity | Price Per Item        | Total Price       |
