@@ -1,7 +1,7 @@
 # Power Subsystem
 
 ## Function of the Subsystem
-The function of the power subsystem is to recieve power from the docking station subsystem and distribute the power to the other subsytems. The power subsystem also has a battery monitoring system that will notify the main control subsystem when the battery charge below a certain threshold. 
+The function of the power subsystem is to recieve power from the docking station subsystem and distribute the power to the other subsytems. The power subsystem also has a battery monitoring system that will notify the main control subsystem when the battery charge fall below a certain threshold. 
 
 ## Specifications and Constraints
 
@@ -15,7 +15,7 @@ The function of the power subsystem is to recieve power from the docking station
 ## Buildable Schematic 
 ![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/Power/power%20schematic%20v3.png)
 
-The system will recieve power from a pair of metal docking contacts. The battery distributes power to the rest of the system through a fuse box. The fuse box provides overcurrent protection to reduce the risk of electrical damage to the AuR's components. A manual switch is added between the fuse box and motors to provide a safety feature to the AuR. The manual switch allows a user to immediately stop the AuR from moving and causing potential physical harm. The OpenCR1 provides 5 Volts to the RaspberryPI3, LIDAR, ESP32, and speakerphone using a built in voltage divider on the OpenCR1. The DDS Module is a componenet part of safety subsystem's design. The DDS Module will provide 5V to the ultrasonic sensors and near field sensors. For further information on the circuit for the sensors, refer to the safey subsystem. 
+The system will recieve power from a pair of metal docking contacts. The battery distributes power to the rest of the system through a fuse box. The fuse box provides overcurrent protection to reduce the risk of electrical damage to the AuR's components. A manual switch is added between the fuse box and motors to reduce the safety risk of the AuR. The manual switch allows a user to immediately stop the AuR from moving and causing potential physical harm. The OpenCR1 provides 5 Volts to the RaspberryPI3, LIDAR, ESP32, and speakerphone using a built in voltage divider on the OpenCR1. The DDS Module is a componenet part of safety subsystem's design. The DDS Module will provide 5V to the ultrasonic sensors and near field sensors. For further information on the circuit for the sensors, refer to the safey subsystem. 
 The voltage sensor will measure the voltage of the battery and send that measurement to the Raspberry PI3 located in the Main Control System
 
 
@@ -87,7 +87,7 @@ The figure above demonstrates a simulation to determine the ripple voltage outpu
 
 ![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/Power/ripple%20plot.png)
 
-As seen from the plot, the ripple voltage coming out of the 12V/5V converter is less than 50mVpp. This then shows that the ripple voltage will not be high enough to damage the electrical components. 
+The lowest ripple voltage tolerance in the system is the Raspberry PI3 and LIDAR with a voltage of 5 ± 5\% V. Then the ripple voltage of the system must not exceed 250 mVpp. As seen from the plot, the ripple voltage coming out of the 12V/5V converter is less than 50mVpp. The plot shows that the ripple voltage will not be high enough to damage the electrical components. 
 
 ## BOM
 | Item                          | Quantity | Price Per Item        | Total Price       |
@@ -102,3 +102,9 @@ As seen from the plot, the ripple voltage coming out of the 12V/5V converter is 
 | DIYmall Voltage Sensor        | 1        | $5.59                 | $5.59             |
 |                               |          | Total Subsystem Cost: | $174.53           |
 
+## References
+“360 laser distance sensor LDS-01 (LIDAR),” _ROBOTIS_. [Online]. Available: https://www.robotis.us/360-laser-distance-sensor-lds-01-lidar/. [Accessed: 16-Feb-2023].
+
+“Grove - ultrasonic distance sensor,” _Seeed Studio_, 29-Dec-2022. [Online]. Available: https://www.seeedstudio.com/Grove-Ultrasonic-Distance-Sensor.html. [Accessed: 16-Feb-2023].
+
+“Raspberry pi 3 model B+.” [Online]. Available: https://static.raspberrypi.org/files/product-briefs/200206+Raspberry+Pi+3+Model+B+plus+Product+Brief+PRINT&DIGITAL.pdf. [Accessed: 16-Feb-2023].
