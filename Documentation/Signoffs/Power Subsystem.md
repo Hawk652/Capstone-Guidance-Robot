@@ -22,27 +22,64 @@ The voltage sensor will measure the voltage of the battery and send that measure
 ## Analysis
 ### Operating Current
 Here are the operating currents for each of the devices on the AuR. 
-| Device              | Operating Current<br>(Amps) |
-| ------------------- | --------------------------- |
-| Ultrasonic Sensor 1 | 0.008                       |
-| Ultrasonic Sensor 2 | 0.008                       |
-| Ultrasonic Sensor 3 | 0.008                       |
-| Ultrasonic Sensor 4 | 0.008                       |
-| Near Field Sensor   | 0.050                       |
-| Motors              | 3.089                       |
-| OpenCR1             | 0.130                       |
-| RaspberryPI3        | 2.000                       |
-| LIDAR               | 0.400                       |
-| ESP32               | 0.032                       |
-| Speakerphone        | 1.500                       |
-| Voltage Sensor      | 0.320                       |
+| Device              | <br>Max<br>Operating Current<br>(Amps) | Operating Voltage<br>(VDC) |
+| ------------------- | -------------------------------------- | --------------------------- |
+| Ultrasonic Sensor 1 | 0.008                                  | 5                           |
+| Ultrasonic Sensor 2 | 0.008                                  | 5                           |
+| Ultrasonic Sensor 3 | 0.008                                  | 5                           |
+| Ultrasonic Sensor 4 | 0.008                                  | 5                           |
+| Near Field Sensor   | 0.050                                  | 5                           |
+| RaspberryPI3        | 2.000                                  | 5                           |
+| LIDAR               | 0.400                                  | 5                           |
+| ESP32               | 0.032                                  | 5                           |
+| Speakerphone        | 1.500                                  | 5                           |
+| Voltage Sensor      | 0.320                                  | 12                          |
+| Motors              | 3.089                                  | 12                          |
+| OpenCR1             | 0.130                                  | 12                          |
 
-Using the equation below to transform current over converters and knowing that parallel currents sum up with each other, the total operating current can be calculated. Additionally, the converters are not perfectly efficient and has some loss. So, a 5% error is added to account for the converters' loss. 
+Using the equation below to transform current over converters and knowing that parallel currents sum up with each other, the total operating current can be calculated. 
 
-$(Is \div Ip) = (Np \div Ns)$
+$$\frac{I_p}{I_s} = \frac{N_s}{N_p}$$
 
-After summing the current and performing the necessary calculations, the total operating current of the AuR is 5.212 ± 0.261A. It is ideal for the AuR to be provided with about double the calculated operating to accomadate for future modifications and possible error. In conclusion, it is optimal for the battery to provide 10 Amps which is about double the calculated operating current.
+$$I_s  = \text{secondary current (current on 5V)}$$
 
+$$I_p = \text{primary current (current on 12V)}$$
+
+$$N_s  = \text{secondary voltage (5V)}$$
+
+$$N_p = \text{primary voltage (12V)}$$
+
+
+$I_{s1} = 0.008 +0.008 +0.008 +0.008 +0.050 = 0.082 A$
+
+$I_{p1} = I_{s1}(\frac{N_s}{N_p}) = 0.082(\frac{5}{12}) =  0.03412A$
+
+
+$I_{s2} = 2.000 + 0.400+0.032+1.500 = 3.932  A$
+
+$I_{p2} = I_{s2}(\frac{N_s}{N_p}) = 3.932(\frac{5}{12}) =  1.638A$
+
+
+$I_M=\text{Motor Current} = 3.089A$
+
+$I_{OCR}=\text{OpenCR1 Current} = 0.130A$
+
+$I_{VS}=\text{Voltage Sensor Current} = 0.320A$
+
+
+$\text{Total Max Operating Current} = I_M+I_{OCR}+I_{VS}+I_{p1}+I_{p2}$
+
+$\text{Total Max Operating Current} = 3.089+0.130+0.320+0.03412+1.638$
+
+$\text{Total Max Operating Current} = 5.212A$
+
+
+Additionally, the converters are not perfectly efficient and has some loss. So, a 5% error is added to account for the converters' loss. 
+
+
+$\text{Rercent Error} = 0.05 * 5.212A = 0.261A$
+
+After summing the current and performing the necessary calculations, the total operating current of the AuR is **5.212 ± 0.261A**. It is ideal for the AuR to be provided with about double the calculated operating to accomadate for future modifications and possible error. In conclusion, it is optimal for the battery to provide 10 Amps which is about double the calculated operating current.
 ### Ripple Voltage
 ![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/Power/ripple%20simulation.png)
 
