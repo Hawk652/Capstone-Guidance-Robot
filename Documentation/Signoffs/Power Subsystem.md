@@ -85,6 +85,10 @@ After summing the current and performing the necessary calculations, the total o
 
 The figure above demonstrates a simulation to determine the ripple voltage outputting from the converters. The motor is represented with the motor's resistance and a switch to replicate the motor turning on and off. The 12V/5V converter are the converters being used to provide 5V to some of the AuR's components. Only one converter will be neccessary to simulate the ripple voltage.
 
+![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/Power/motor%20ripple.png)
+
+The plot above above demonstrates the ripple voltage caued by the motors switching on and off. The simulated ripple voltage is measured to be about 1.2 Vpp. The ripple voltage caused by the motors must be reduced to meet the constraint of not exceeding 250 mVpp. 
+
 ![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/Power/ripple%20plot.png)
 
 The lowest ripple voltage tolerance in the system is the Raspberry PI3 and LIDAR with a voltage of 5 ± 5\% V. Then the ripple voltage of the system must not exceed 250 mVpp. As seen from the plot, the ripple voltage coming out of the 12V/5V converter is about 9 mVpp. So, the power subsystem achieves the constraint of sending less than 250 mVpp to the components. 
