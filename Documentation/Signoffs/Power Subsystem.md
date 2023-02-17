@@ -8,7 +8,7 @@ The function of the power subsystem is to recieve power from the docking station
 | No. | Specifications and Constraints | Origin | 
 |-|-|-| 
 | 1 | Shall have plugless charging | Supervisor: Dr. Van Neste 
-| 2 | Shall have a ripple voltage tolerance of 50 mVpp | Supervisor: Dr. Van Neste
+| 2 | Shall have a ripple voltage tolerance of 250 mVpp | Raspberry PI3
 | 3 | Shall follow proper wire gauging standards | NEC 310.16(b)
 | 4 | Shall not operate below 15-20% of the battery capacity | Ethics
 
@@ -87,7 +87,7 @@ The figure above demonstrates a simulation to determine the ripple voltage outpu
 
 ![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/Power/ripple%20plot.png)
 
-The lowest ripple voltage tolerance in the system is the Raspberry PI3 and LIDAR with a voltage of 5 ± 5\% V. Then the ripple voltage of the system must not exceed 250 mVpp. As seen from the plot, the ripple voltage coming out of the 12V/5V converter is less than 50mVpp. The plot shows that the ripple voltage will not be high enough to damage the electrical components. 
+The lowest ripple voltage tolerance in the system is the Raspberry PI3 and LIDAR with a voltage of 5 ± 5\% V. Then the ripple voltage of the system must not exceed 250 mVpp. As seen from the plot, the ripple voltage coming out of the 12V/5V converter is less than 250mVpp. So, the power subsystem achieves the constraint of sending less than 250mVpp to the components. 
 
 ## BOM
 | Item                          | Quantity | Price Per Item        | Total Price       |
