@@ -87,7 +87,7 @@ The figure above demonstrates a simulation to determine the ripple voltage outpu
 
 ![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/Power/ripple%20plot.png)
 
-The lowest ripple voltage tolerance in the system is the Raspberry PI3 and LIDAR with a voltage of 5 ± 5\% V. Then the ripple voltage of the system must not exceed 250 mVpp. As seen from the plot, the ripple voltage coming out of the 12V/5V converter is less than 250mVpp. So, the power subsystem achieves the constraint of sending less than 250mVpp to the components. 
+The lowest ripple voltage tolerance in the system is the Raspberry PI3 and LIDAR with a voltage of 5 ± 5\% V. Then the ripple voltage of the system must not exceed 250 mVpp. As seen from the plot, the ripple voltage coming out of the 12V/5V converter is about 9 mVpp. So, the power subsystem achieves the constraint of sending less than 250 mVpp to the components. 
 
 ## BOM
 | Item                          | Quantity | Price Per Item        | Total Price       |
