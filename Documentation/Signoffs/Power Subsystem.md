@@ -77,7 +77,7 @@ $\text{Total Max Operating Current} = 5.212A$
 Additionally, the converters are not perfectly efficient and has some loss. So, a 5% error is added to account for the converters' loss. 
 
 
-$\text{Rercent Error} = 0.05 * 5.212A = 0.261A$
+$\text{Percent Error} = 0.05 * 5.212A = 0.261A$
 
 After summing the current and performing the necessary calculations, the total operating current of the AuR is **5.212 ± 0.261A**. It is ideal for the AuR to be provided with about double the calculated operating to accomadate for future modifications and possible error. In conclusion, it is optimal for the battery to provide 10 Amps which is about double the calculated operating current.
 ### Ripple Voltage
