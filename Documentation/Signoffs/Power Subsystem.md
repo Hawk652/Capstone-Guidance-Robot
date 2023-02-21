@@ -80,18 +80,26 @@ Additionally, the converters are not perfectly efficient and has some loss. So, 
 $\text{Percent Error} = 0.05 * 5.212A = 0.261A$
 
 After summing the current and performing the necessary calculations, the total operating current of the AuR is **5.212 ± 0.261A**. It is ideal for the AuR to be provided with about double the calculated operating to accomadate for future modifications and possible error. In conclusion, it is optimal for the battery to provide 10 Amps which is about double the calculated operating current.
+
 ### Ripple Voltage
-![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/Power/ripple%20simulation.png)
+![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/Power/ripple%20simulation%20v3.png)
 
-The figure above demonstrates a simulation to determine the ripple voltage outputting from the converters. The motor is represented with the motor's resistance and a switch to replicate the motor turning on and off. The 12V/5V converter are the converters being used to provide 5V to some of the AuR's components. Only one converter will be neccessary to simulate the ripple voltage.
+The figure above shows the setup for simulating ripple voltage caused by the dc motor and how the designed filters reduce the noise caused by the motor. The goal of simulating the ripple voltage is to determine if the designed filters are able to keep the system within the constraint of having less than 250 mVpp for ripple voltage. The constraint is set at 250 mVpp due to the LIDAR and Raspberry PI3's max ripple tolerance of 5 ± 5\% V, which equates to 250 mVpp. So, the ripple voltage sent to components other than the dc motor must not exceed 250 mVpp to reduce risk of electrical damage. 
 
-![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/Power/motor%20ripple.png)
+**Ripple Voltage Caused By Motor**
+![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/Power/ripple%20motor%20v3.png)
 
-The plot above above demonstrates the ripple voltage caued by the motors switching on and off. The simulated ripple voltage is measured to be about 1.2 Vpp. The ripple voltage caused by the motors must be reduced to meet the constraint of not exceeding 250 mVpp. 
+To create the motor, an inductor with series resistance is connected to a IGBT to represent motors turning on and off. A flyback diode is added to the motor's circuit to remove the sudden voltage spike caused when an inductor's current is cutoff. As seen from the graph, the simulated ripple voltage created by the motor is about 300 mVpp. This ripple voltage is higher than the constraint of 250 mVpp, which means that filters will be necessary.
 
-![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/Power/ripple%20plot.png)
+**Voltage Output of 12V/5V Voltage Regulator**
+![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/Power/ripple%20voltage%20regulator%20v2.png)
 
-The lowest ripple voltage tolerance in the system is the Raspberry PI3 and LIDAR with a voltage of 5 ± 5\% V. Then the ripple voltage of the system must not exceed 250 mVpp. As seen from the plot, the ripple voltage coming out of the 12V/5V converter is about 9 mVpp. So, the power subsystem achieves the constraint of sending less than 250 mVpp to the components. 
+The simulated ripple voltage outputted by the Voltage Regular is about 140 mVpp. Thus, the Voltage Regulator is able to keep the ripple voltage within the 250 mVpp constraint. So, no additional filters are necessary for the sensors.
+
+**Voltage Output of OpenCR1 12V/5V Converter**
+![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/Power/ripple%20OpenCr1%20v3.png)
+
+The simulated ripple voltage outputted by the OpenCR1 Converter is about 41 mVpp. Thus, the OpenCR1 Converter is able to keep the ripple voltage within the 250 mVpp constraint. So, no additional filters will not be necessary for the OpenCR1's output. 
 
 ## BOM
 | Item                          | Quantity | Price Per Item        | Total Price       |
