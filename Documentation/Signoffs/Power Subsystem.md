@@ -99,7 +99,7 @@ The simulated ripple voltage outputted by the Voltage Regular is about 140 mVpp.
 **Voltage Output of OpenCR1 12V/5V Converter**
 ![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/Power/ripple%20OpenCr1%20v3.png)
 
-The simulated ripple voltage outputted by the OpenCR1 Converter is about 41 mVpp. Thus, the OpenCR1 Converter is able to keep the ripple voltage within the 250 mVpp constraint. So, no additional filters will not be necessary for the OpenCR1's output. 
+The simulated ripple voltage outputted by the OpenCR1 Converter is about 41 mVpp. Thus, the OpenCR1 Converter is able to keep the ripple voltage within the 250 mVpp constraint. So, no additional filters will need to be added at the OpenCR1's output. 
 
 ## BOM
 | Item                          | Quantity | Price Per Item        | Total Price       |
