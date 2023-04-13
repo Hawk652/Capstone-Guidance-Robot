@@ -4,7 +4,7 @@
 Enclosures for the new stepper motors were designed and printed. Unfortunately, the new stepper motors will not be utilized because the motor controllers will not be arriving in on time.
 
 ## Safety
-THe robot is able to prevent collision with an object or wall.
+The robot is able to prevent collision with an object or wall.
 
 ## Localization
 ESP32 beacons were able to communicate with each other and relay positional data. The ESP32 beacons were used instead because the ultra-wideband beacons will not be arriving in on time. 
