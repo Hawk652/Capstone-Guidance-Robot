@@ -16,4 +16,4 @@ The chaging subsystem is able to transform AC power from a receptacle into DC po
 The robot is able to move around and change directions with the use of voice commands through a microphone.
 
 ## Main Control
-The robot is able to take commands from the user interface subsystem and use the LIDAR to move around in its environment. 
+The robot is able to take commands from the user interface subsystem and use the LIDAR and motors to move around in its environment. 
