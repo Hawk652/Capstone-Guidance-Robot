@@ -9,7 +9,8 @@ The specification that will be tested is:
 ### Testing Method
 
 Since the originally decided UWB boards did not arrive in time, we decided to explore the possibility of bluetooth based positioning. We used two ESP32s for this test, one as a beacon and one as a reciever. Below is an account of the measurements and calculations used to test accuracy. We tested only distance error since positional error relies entirely on distancing error. 
-
+![Alt text](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/localization/localization_Experiment.jpg)
+Figure 1: Experimental Setup
 ### Data
 
 Each RSSI shown below is an average of 5 samples. Distance estimate is 
