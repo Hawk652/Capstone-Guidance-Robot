@@ -22,7 +22,7 @@ After calculating force, the following equation can be used to obtain the exact 
 
 $T = (f * r_{wheel})$
 
-$0.707322Nm = (1.26N * .033m)$
+$0.3537Nm = \frac{(2.1434N * .033m)}{2}$
 
 The following equation will yield the current draw of the motors where $K_{T}$ is the torque constant of the motor found in the datasheet for the Pittman motor [1]:
 
