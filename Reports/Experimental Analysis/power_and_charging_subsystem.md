@@ -63,6 +63,10 @@ The specifications and constraints that will be tested are listed below:
 
 The charging system's circuit will be tested by connecting to a 120 VAC source such as a wall receptacle. Then a multimeter will then be connected to the metal charging contacts to ensure the correct DC voltage is provided. Additionally, the switch of the circuit will be toggled to ensure the circuit can be turned on and off by the user.
 
+![Docking Station Experimentation](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/Power/Docking%20Station%20Circuit.jpg)
+
+The circuit is powered by a 120 VAC source. The circuit is supplying 18 VDC at the metal contacts. The switch on the Buck Booster can switch the output on or off.
+
 ### Results
 
 After connecting the charging circuit to a wall receptacle, the multimeter read the following measurements at the metal charging contacts while connected to a 1000 Ohm resistor:
