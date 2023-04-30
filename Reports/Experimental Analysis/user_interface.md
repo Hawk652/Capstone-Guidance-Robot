@@ -8,10 +8,11 @@ The constraints that will be tested are listed below:
 The user interface shall be tested by speaking commands and determining whether the AuR produces the appropriate response
 
 ### Results
-After testing various commands, the AuR did as follows:
- - Turn Left: The AuR turned approximately 90 degrees left as expected
- - Turn Right: The AuR turned approximately 90 degrees right as expected
- - Go: The AuR moved forward until the Stop command was spoken
- - Stop: The AuR stopped all movement
+After testing the "go to" command, the AuR correctly navigated to the given destination:
+- Tested "go to room 119", AuR navigated to Prescott room 119
+- Tested "go to elevator", AuR navigated to the elevator we set
+- Tested "go to home", AuR navigated to the point we marked as its home
+
+[Experimentation](https://youtu.be/yajVJaV24Pw)
 
 In conclusion, the user interface subsystem functions correctly and is able to meet the required specifications.
