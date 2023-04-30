@@ -18,4 +18,4 @@ Additionally, we ran an experiment of 5 trials to determine the top speed of the
 | 2m       | 8.56s|
 | 2m       | 8.53s|
 
-![Locomotion Experiment](Documentation/Images/locomotion/locomotion_experiment.png)
+![Locomotion Experiment](../../Documentation/Images/locomotion/locomotion_experiment.png)
