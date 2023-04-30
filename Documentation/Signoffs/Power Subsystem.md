@@ -13,7 +13,7 @@ The function of the power subsystem is to recieve power from the docking station
 | 4 | Shall not operate below 15-20% of the battery capacity | Ethics
 
 ## Buildable Schematic 
-![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/Power/power%20schematic%20v3.png)
+![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/Power/power%20schematic.png)
 
 The system will recieve power from a pair of metal docking contacts. The battery distributes power to the rest of the system through a fuse box. The fuse box provides overcurrent protection to reduce the risk of electrical damage to the AuR's components. A manual switch is added between the fuse box and motors to reduce the safety risk of the AuR. The manual switch allows a user to immediately stop the AuR from moving and causing potential physical harm. The OpenCR1 provides 5 Volts to the RaspberryPI3, LIDAR, ESP32, and speakerphone using a built in voltage divider on the OpenCR1. The DDS Module is a componenet part of safety subsystem's design. The DDS Module will provide 5V to the ultrasonic sensors and near field sensors. For further information on the circuit for the sensors, refer to the safey subsystem. 
 The voltage sensor will measure the voltage of the battery and send that measurement to the Raspberry PI3 located in the Main Control System
@@ -112,7 +112,8 @@ The simulated ripple voltage outputted by the OpenCR1 Converter is about 41 mVpp
 | 6 Way Fuse Block              | 1        | $12.00                | $12.00            |
 | Metal Contacts                | 1        | $16.95                | $16.95            |
 | DIYmall Voltage Sensor        | 1        | $5.59                 | $5.59             |
-|                               |          | Total Subsystem Cost: | $174.53           |
+| Buck Converters (2 pack)      | 1        | $16.99                | $16.99            |
+|                               |          | Total Subsystem Cost: | $191.52           |
 
 ## References
 “360 laser distance sensor LDS-01 (LIDAR),” _ROBOTIS_. [Online]. Available: https://www.robotis.us/360-laser-distance-sensor-lds-01-lidar/. [Accessed: 16-Feb-2023].
