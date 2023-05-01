@@ -50,3 +50,23 @@ Always have backup documentation, that way if anything were to happen you have e
 Future students, my advice would be start everything extremely early. During the semester, all of the other classes will become busy and you will feel as though you are drowning in work. If you go ahead and make a schedule for yourself, you will feel more at ease during capstone. Learn the importance of communicating with your team, the most important thing is to talk to your team. This is not an individual project, it is a group project. However, when you begin your subsystems that can be viewed as your contribution to the team.
 
 I have learned how to design a circuit, design a PCB board and Surface Mount solder this semester. After completeing capstone, I feel very accomplished and proud of my contributions to the group. I have not only grown with my technical skills but also in my professional skills.
+
+## Andre Nguyen
+
+•    Reflect on the project, both technical and organizational. What went well? What didn’t go well?
+  The team were able to complete tasks the sign offs within a reasonable time frame and collaborate well on tasks. What didn’t go well was some miscommunication between team members. Sometimes it was difficult to get in contact with team members at certain times. This made it difficult to complete some tasks.
+  
+•    What unanticipated problems occurred?
+  Ordering was an issue I did not anticipate. The ordering issue made a major halt in the project’s progression during the second semester. I also did not anticipate how often team members would miss meetings due to different circumstances.
+  
+•    What would you do differently if you were to do it over again?
+  I would have all sign offs complete before the second semester so parts would arrive in a timely manner. I would also change some of the constraints and collaborate more with a mechanical team so the scope of the project would be more reasonable. 
+  
+•    What “best practices” have you identified?
+  One “best practice” was me creating a weekly agenda for the team. This sometimes kept the team updated on deadlines and assisted in team members coordinating with their tasks.  Another good practice was trying to keep consistency  between everyone’s work. 
+  
+•    What words of wisdom would you pass on to future students?
+  It is important to keep up with the deadlines and attempt to not fall behind. Another advice is to always make an attempt even though it seems something will fail.
+  
+•    What new knowledge or skills did you acquire throughout capstone.
+  I increased my knowledge of simulating different circuits. Additionally, I learned how to 3d model and print.
