@@ -7,7 +7,7 @@ Entering a building for the first time can be confusing. An insuffieicnt amount 
 
 ## Capabilities
 
-The current version of the project serves as an oversized paperweight at the moment. 
+Our final product is capable of mapping and navigating an area whilst avoiding collisions. It can reroute its path and always ensure that the user gets to the room that they are wanting to go to as well as return to its starting location once it's finished.
 
 ## Salient Outcomes
 
