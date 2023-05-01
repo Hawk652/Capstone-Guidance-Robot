@@ -9,7 +9,7 @@ This document should have a section for each team member. Each engineer should r
 - What new knowledge or skills did you acquire throughout capstone.
 
 Create a subsection addressing each of the above questions in your section of the document. 
-##Samuel Mandody
+## Samuel Mandody
 •	The things that went well were the meetings and negotiations that we had with our stakeholders, advisor and customer. We always came prepared and had all our ideas lined up and thoroughly researched beforehand. Apart from that, honestly not too much. Due to the supply chain issue, we were not able to get our hands on any of the parts that we had ordered for our project.
 •	Not having access to our parts made it difficult to figure out a direction since our entire project was dependent on having our parts. We tried seeing what we could substitute, but to no avail. There wasn’t much of anything we could do or show that the turtlebot wasn’t already capable of achieving.
 •	If put in the same position of having to figure out what upgrades to implement or not, I would be sure to choose upgrades that are going to be more accessible parts wise at the tradeoff of writing more code or spending extra time optimizing the system overall.
