@@ -13,9 +13,9 @@ The current version of the project serves as an oversized paperweight at the mom
 
 We learned that bluetooth 5.2 location services is not very accesible at the consumer level as of yet outside of heavy research or recent products. It's the reason why we ended up having to change to ultra wideband triangulation for location verification. We're also going to be learning about and implementing near field sensors as close range location verification with the assistance of Dr. Charles Van Neste More stuff will get added as we actually assemble the project.
 
-## Project Demonstration & Images
+## Project Demonstration
 
-Nothing here yet but check back in a bit! 
+[Video demonstration of our Capstone project!](https://youtu.be/Icbw_ISEM2E)
 
 ## About Us
 
