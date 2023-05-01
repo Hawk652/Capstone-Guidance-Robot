@@ -70,3 +70,23 @@ I have learned how to design a circuit, design a PCB board and Surface Mount sol
   
 •    What new knowledge or skills did you acquire throughout capstone.
   I increased my knowledge of simulating different circuits. Additionally, I learned how to 3d model and print.
+  
+## Jacob Wilkinson
+
+Reflect on the project, both technical and organizational. What went well? What didn’t go well?
+From an organizational point of view, collaboration was good within the different sections of the team, however overall group-wide communication was lacking. We had a group leader who bridged the gaps between the different subgroups, but that resulted in most of the communication going through him. From a technical point of view, the design of the subsystems went well. However, most of the parts never arrived, so very few non-software subsystems were able to be implemented.
+
+•    What unanticipated problems occurred?
+The major unanticipated problem we experienced was our components not arriving. Outside of that, we had a couple issues with differing communication from our advisor and the course instructor regarding expectations for the project.
+
+•    What would you do differently if you were to do it over again?
+I would try to communicate more actively with my team. Most of the issues we encountered with the project were due to miscommunication between team members. I would also try to have more backup options available for when needed components don't arrive.
+
+•    What “best practices” have you identified?
+Weekly team meetings helped keep everyone on track, so they were a good practice to have. It's also good practice to document what you work on and let your other team members look over it.
+
+•    What words of wisdom would you pass on to future students?
+Communicate! Let your team members know what issues you're having and there will often be someone who can help! Also, for the sake of you and your team members' sanity, try to finish your part at least a couple days before the deadline instead of rushing to complete it at the last minute.
+
+•    What new knowledge or skills did you acquire throughout capstone.
+I worked mostly with the software of the AuR, so the main technical skills I learned were using and interfacing with ROS and the other software we used. From a soft skills standpoint, I learned better how to communicate and work with a team. 
