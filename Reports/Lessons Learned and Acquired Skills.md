@@ -22,7 +22,7 @@ Create a subsection addressing each of the above questions in your section of th
 
 •	I learned how to use plecs for more detailed circuit simulation, how to use LaTeX for more professional looking documentation, and the fundamentals of DC motor physics.
 
-##Emma Brown
+## Emma Brown
 
 -The things that went well were that we always had our weekly meetings and discussed what was happening in our project with our stakeholders and supervisor. At the beginning, the group really struggled with communication and making each other know that everyone's opinions are important.
 
