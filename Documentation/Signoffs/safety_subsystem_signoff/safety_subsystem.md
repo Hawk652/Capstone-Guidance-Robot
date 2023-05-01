@@ -53,7 +53,7 @@ back side
 After extensive research and discussions with Dr. Van Neste, this sensor seemed to be the best for the Autonomous Guidance Robot. Currently, there are not any sensors on the market that would be within the price range of this project. The best option was to build an omnidirectional sensor with the help of Dr. Van Neste. This sensor will enable the robot to detect any obstacles or people that might stand in the way of the robot and be able to avoid the detections that have been obtained. 
 
 #  Ultrasonic Sensor
-![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/safety/Grove-Ultrasonic-Distance-Sensor-pinoutFinal.jpg)
+![ALT](https://github.com/Hawk652/Capstone-Guidance-Robot/blob/main/Documentation/Images/safety/Grove-Ultrasonic-Distance-Sensor-pinout.jpg)
 
 The Grove - Ultrasonic Distance Sensor will be implented as the ultrasonic sensor for this subsystem.This item will be a backup sensor for the Proximity sensor. 
 
