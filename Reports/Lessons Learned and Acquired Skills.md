@@ -9,6 +9,22 @@ This document should have a section for each team member. Each engineer should r
 - What new knowledge or skills did you acquire throughout capstone.
 
 Create a subsection addressing each of the above questions in your section of the document. 
+
+## Gabriel Kim
+### Reflections
+Most of the designing and planning phase went well, but when it came to execution hardly anything went well. All of the problems were due to not getting the parts we needed to complete the project. In spite of all of this Dr. Van Neste was very helpful and understanding.
+### Unanticipated Problems
+The biggest unforeseen problem was not getting hardly any of the parts we needed to complete our project. I believe if we had gotten the needed supplies that we could have met most if not all of the specs and constraints.
+### What I Would Redo
+If I were to redo this project I would get the conceptual design phase done in the first semester so I could order the needed parts as soon as possible.
+### Advice for Future Students
+- Always have a backup plan
+- Don't wait until last minute to do important things
+- Understand that something will always go wrong
+### Acquired Knowledge
+- RSSI distancing is very inaccurate
+- No amount of planning can make the impossible possible
+
 ## Samuel Mandody
 •	The things that went well were the meetings and negotiations that we had with our stakeholders, advisor and customer. We always came prepared and had all our ideas lined up and thoroughly researched beforehand. Apart from that, honestly not too much. Due to the supply chain issue, we were not able to get our hands on any of the parts that we had ordered for our project.
 
