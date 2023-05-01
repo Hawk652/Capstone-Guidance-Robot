@@ -16,7 +16,7 @@ Most of the designing and planning phase went well, but when it came to executio
 ### Unanticipated Problems
 The biggest unforeseen problem was not getting hardly any of the parts we needed to complete our project. I believe if we had gotten the needed supplies that we could have met most if not all of the specs and constraints.
 ### What I Would Redo
-If I were to redo this project I would get the conceptual design phase done in the first semester so I could order the needed parts as soon as possible.
+If I were to redo this project I would get the detail design phase done in the first semester so I could order the needed parts as soon as possible.
 ### Advice for Future Students
 - Always have a backup plan
 - Don't wait until last minute to do important things
